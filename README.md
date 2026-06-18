@@ -146,6 +146,8 @@ evalmc submit-onnx my_model.onnx -t elbowflexion -p 1
 
 Export a valid test model with [`examples/export_elbow_onnx.py`](examples/export_elbow_onnx.py).
 
+**Train your own policy:** see the full tutorial [`tutorials/TRAIN_EXPORT_SUBMIT.md`](tutorials/TRAIN_EXPORT_SUBMIT.md) (Stable-Baselines3 or mjlab → ONNX export → `evalmc submit-onnx`).
+
 ---
 
 ## Local development

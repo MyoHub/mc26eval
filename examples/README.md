@@ -12,6 +12,38 @@ Runnable templates for MyoChallenge 2026 submissions. Start with the workflow th
 | [`policy_utils.py`](policy_utils.py) | Resolves action dimension from `task_config.json` or eval harness metadata |
 | [`task_config.json`](task_config.json) | Local dev config for elbow flexion (`obs_dim=9`, `action_dim=6`) |
 | [`export_elbow_onnx.py`](export_elbow_onnx.py) | Writes a valid test `.onnx` for the elbow flexion contract |
+| [`train_sb3_elbow.py`](train_sb3_elbow.py) | Train elbow flexion with Stable-Baselines3 PPO |
+| [`export_mjlab_onnx.py`](export_mjlab_onnx.py) | Export mjlab/RSL-RL actor → ONNX (MyoSuite helpers when installed) |
+
+Full walkthrough: [`../tutorials/TRAIN_EXPORT_SUBMIT.md`](../tutorials/TRAIN_EXPORT_SUBMIT.md) (SB3 + mjlab training, MyoSuite ONNX helpers, submission).
+
+### Isolated pipeline tests
+
+No MyoSuite or MuJoCo required. From the `mc26eval` root:
+
+```bash
+python -m venv .test-venv && source .test-venv/bin/activate
+pip install -e ".[test]"
+pytest tests/test_sb3_onnx_pipeline.py tests/test_mjlab_onnx_pipeline.py -v
+```
+
+- `test_sb3_onnx_pipeline.py` — dummy env → SB3 PPO → `export_sb3_onnx` → ONNX inference
+- `test_mjlab_onnx_pipeline.py` — mjlab-style actor → ONNX export (helper test skips if `mjlab_myosuite` not installed)
+
+### End-to-end: two users train and submit
+
+[`tests/test_e2e_two_user_submit.py`](../tests/test_e2e_two_user_submit.py) registers **separate users** for each pipeline and POSTs ONNX to the API:
+
+```bash
+# Embedded API (no server)
+./scripts/run_e2e_submit.sh offline
+
+# Real HTTP against local mcEvalProd
+./scripts/run_e2e_submit.sh local
+
+# Production (requires working /register on the server)
+LIVE_API_BASE=https://api.mc.myosuite.org ./scripts/run_e2e_submit.sh live
+```
 
 ## Workflows
 

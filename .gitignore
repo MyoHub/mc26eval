@@ -1,8 +1,10 @@
 # Python
 __pycache__/
 *.py[cod]
+*.egg-info/
 .venv/
 venv/
+.test-venv/
 .env
 
 # Submission artifacts (generate locally)
