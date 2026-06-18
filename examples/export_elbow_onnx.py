@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Export a minimal valid ONNX model for elbowflexion (obs=9, action=6)."""
+"""Export a minimal valid ONNX model for elbowflexion (obs=9, action=6).
+
+After export:
+  evalmc submit-onnx elbow_model.onnx -t elbowflexion -p 1
+"""
 
 from __future__ import annotations
 

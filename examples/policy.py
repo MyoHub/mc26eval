@@ -14,7 +14,10 @@ relative to the same directory as policy.py.
 """
 
 from pathlib import Path
+
 import numpy as np
+
+from policy_utils import get_action_dim
 
 
 class Policy:
@@ -24,7 +27,7 @@ class Policy:
         # Load weights from a file bundled in the zip, e.g.:
         # weights_path = Path(__file__).parent / "weights.npz"
         # self.weights = np.load(weights_path)
-        pass
+        self._action_dim = get_action_dim()
 
     def reset(self):
         """Called at the start of every episode."""
@@ -40,4 +43,4 @@ class Policy:
             action: 1-D numpy array, shape defined by the task environment.
         """
         # TODO: replace with your policy inference
-        return np.zeros(39)  # placeholder: zero action
+        return np.zeros(self._action_dim, dtype=np.float32)

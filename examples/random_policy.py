@@ -1,14 +1,21 @@
-"""Minimal random policy — useful as a submission baseline to verify the pipeline."""
+"""Minimal random policy — baseline to verify the submission pipeline on any task.
+
+Bundle policy_utils.py and task_config.json in your zip alongside policy.py.
+"""
 
 import numpy as np
+
+from policy_utils import get_action_dim
 
 
 class Policy:
     def __init__(self):
         self.rng = np.random.default_rng()
+        self._action_dim = get_action_dim()
 
     def reset(self):
         pass
 
     def get_action(self, obs: np.ndarray) -> np.ndarray:
-        return self.rng.uniform(-1, 1, size=39).astype(np.float32)
+        # Harness clips actions to [0, 1] for muscle activations.
+        return self.rng.uniform(0.0, 1.0, size=self._action_dim).astype(np.float32)

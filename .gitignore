@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Submission artifacts (generate locally)
+*.zip
+*.onnx
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/

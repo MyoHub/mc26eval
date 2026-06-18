@@ -1,0 +1,7 @@
+{
+  "task": "elbowflexion",
+  "phase": 1,
+  "env_id": "myoElbowPose1D6MRandom-v0",
+  "action_dim": 6,
+  "obs_dim": 9
+}
