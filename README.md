@@ -8,16 +8,35 @@ Train a policy that controls a physiologically-realistic arm model to perform de
 
 ## Tasks
 
-| Task | Description |
-|---|---|
-| **TableTennis** | Return a ball to a target zone using a racket |
-| **Soccer** | Kick a ball to a goal with precise control |
+| Task | Phase | Description |
+|---|---|---|
+| **Elbow Flexion** | 1 | Control a 6-muscle elbow model to reach target poses (`myoElbowPose1D6MRandom-v0`) |
+| **Boxing** | 1 | *(coming soon)* |
+| **Fencing** | 1 | *(coming soon)* |
 
-Each task has multiple competition **phases** with increasing difficulty.
+MyoSuite for MC26 uses the [`ms3` branch](https://github.com/MyoHub/myosuite/tree/ms3) (Gymnasium API).
 
 ---
 
-## Submission (recommended: zip upload)
+## Submission: ONNX model (Elbow Flexion)
+
+Upload a standalone `.onnx` file — no `policy.py` required:
+
+```bash
+evalmc submit-onnx my_model.onnx -t elbowflexion -p 1
+```
+
+Local development with MyoSuite ms3:
+
+```bash
+git clone --recursive -b ms3 https://github.com/MyoHub/myosuite.git
+cd myosuite && pip install -e . && python -m myosuite_init
+python -m myosuite.utils.examine_env --env_name myoElbowPose1D6MRandom-v0
+```
+
+---
+
+## Submission: zip upload (policy.py)
 
 No Docker required. Package your trained policy as a zip file and upload it in seconds.
 
