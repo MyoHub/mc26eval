@@ -2,20 +2,30 @@
 
 Runnable templates for MyoChallenge 2026 submissions. Start with the workflow that matches your path, then replace the baseline with your trained policy.
 
+**New here?** → [`../tutorials/NEWBIE_QUICKSTART.md`](../tutorials/NEWBIE_QUICKSTART.md)  
+**What can I import?** → [`../tutorials/SUBMISSION_DEPENDENCIES.md`](../tutorials/SUBMISSION_DEPENDENCIES.md)
+
 ## Files
 
 | File | Purpose |
 |---|---|
-| [`policy.py`](policy.py) | Documented `Policy` class template — copy and customize |
-| [`random_policy.py`](random_policy.py) | Random muscle activations — fastest zip smoke test |
+| [`policy.py`](policy.py) | Documented `Policy` class template — copy into a Docker agent image |
+| [`random_policy.py`](random_policy.py) | Random muscle activations — fastest local / Docker smoke test |
 | [`elbow_policy.py`](elbow_policy.py) | Constant 0.5 activations — deterministic baseline |
+| [`chasetag_policy.py`](chasetag_policy.py) | SB3 chaser/runner wrapper for full-body ChaseTag |
+| [`chasetag_task_config.json`](chasetag_task_config.json) | Local config for ChaseTag (`obs_dim=546`, `action_dim=354`) |
 | [`policy_utils.py`](policy_utils.py) | Resolves action dimension from `task_config.json` or eval harness metadata |
 | [`task_config.json`](task_config.json) | Local dev config for elbow flexion (`obs_dim=9`, `action_dim=6`) |
 | [`export_elbow_onnx.py`](export_elbow_onnx.py) | Writes a valid test `.onnx` for the elbow flexion contract |
 | [`train_sb3_elbow.py`](train_sb3_elbow.py) | Train elbow flexion with Stable-Baselines3 PPO |
 | [`export_mjlab_onnx.py`](export_mjlab_onnx.py) | Export mjlab/RSL-RL actor → ONNX (MyoSuite helpers when installed) |
 
-Full walkthrough: [`../tutorials/TRAIN_EXPORT_SUBMIT.md`](../tutorials/TRAIN_EXPORT_SUBMIT.md) (SB3 + mjlab training, MyoSuite ONNX helpers, submission).
+Full walkthroughs:
+
+- [`../tutorials/NEWBIE_QUICKSTART.md`](../tutorials/NEWBIE_QUICKSTART.md) — first submit
+- [`../tutorials/SUBMISSION_DEPENDENCIES.md`](../tutorials/SUBMISSION_DEPENDENCIES.md) — allowed imports
+- [`../tutorials/TRAIN_EXPORT_SUBMIT.md`](../tutorials/TRAIN_EXPORT_SUBMIT.md) — SB3 + mjlab → ONNX
+- [`../DOCKER_SUBMISSION.md`](../DOCKER_SUBMISSION.md) — Docker agent images with `policy.py`
 
 ### Isolated pipeline tests
 
@@ -47,67 +57,55 @@ LIVE_API_BASE=https://api.mc.myosuite.org ./scripts/run_e2e_submit.sh live
 
 ## Workflows
 
-### Zip — random baseline (any task)
+### ONNX — elbow flexion *(primary)*
 
 ```bash
-cp random_policy.py policy.py
-zip my_baseline.zip policy.py policy_utils.py task_config.json
-evalmc submit my_baseline.zip -t elbowflexion -p 1
-```
-
-Edit `task_config.json` when future tasks open (set `task`, `env_id`, and dimensions).
-
-### Zip — from the template
-
-```bash
-# policy.py is already the template; add your weights beside it
-zip my_submission.zip policy.py my_weights.pt policy_utils.py task_config.json
-evalmc submit my_submission.zip -t elbowflexion -p 1
-```
-
-### ONNX — elbow flexion
-
-```bash
-pip install onnx numpy
+pip install onnx numpy onnxruntime
 python export_elbow_onnx.py -o elbow_model.onnx
+python ../scripts/smoke_test_onnx.py elbow_model.onnx --task elbowflexion
 evalmc submit-onnx elbow_model.onnx -t elbowflexion -p 1
 ```
 
 **ONNX I/O contract:** `obs` → `[batch, 9]`, `action` → `[batch, 6]`.
 
-### Local roll-out (before submitting)
+### Docker — random `policy.py` baseline
+
+```bash
+cp random_policy.py policy.py
+python ../scripts/smoke_test_policy.py --task elbowflexion   # needs MyoSuite ms3
+docker build -t myteam-elbowflexion-p1:latest -f- . <<'EOF'
+FROM python:3.10-slim
+WORKDIR /policy
+COPY policy.py policy_utils.py task_config.json .
+EOF
+evalmc push myteam-elbowflexion-p1:latest -t elbowflexion -p 1
+```
+
+Edit `task_config.json` when future tasks open (set `task`, `env_id`, and dimensions).
+See [DOCKER_SUBMISSION.md](../DOCKER_SUBMISSION.md) for production ECR details.
+
+### Local roll-out (before Docker push)
 
 ```bash
 cp random_policy.py policy.py   # or your own policy.py
-
-python - <<'EOF'
-import gymnasium as gym
-import myosuite
-from policy import Policy
-
-myosuite.register_all_envs()
-env = gym.make("myoElbowPose1D6MRandom-v0")
-policy = Policy()
-obs, _ = env.reset()
-policy.reset()
-terminated = truncated = False
-while not (terminated or truncated):
-    obs, _, terminated, truncated, _ = env.step(policy.get_action(obs))
-env.close()
-print("OK")
-EOF
+python ../scripts/smoke_test_policy.py --task elbowflexion
 ```
 
 Requires MyoSuite [`ms3`](https://github.com/MyoHub/myosuite/tree/ms3). See the [main README](../README.md#local-development) for install steps.
 
-## What goes in the zip?
+## What goes in a Docker agent image?
 
 ```
-my_submission.zip
-├── policy.py          ← required, at root
-├── policy_utils.py    ← recommended (action sizing)
-├── task_config.json   ← required for local dev; optional on server
-└── weights.pt         ← your trained parameters (optional)
+/policy/                 ← mounted / copied into the agent image
+├── policy.py            ← required (or model.onnx)
+├── policy_utils.py      ← recommended (action sizing)
+├── task_config.json     ← useful for local smoke tests
+└── weights.pt           ← your trained parameters (optional)
 ```
 
-The evaluation harness mounts your zip at `/policy` and runs `from policy import Policy`.
+**Do not** expect a bare `requirements.txt` to be installed by the platform —
+install packages in your Dockerfile, or stick to packages already in the
+[task eval image](../tutorials/SUBMISSION_DEPENDENCIES.md).
+
+The evaluation harness mounts `/policy` (or `/app`) and runs `from policy import Policy`
+(or loads `model.onnx` via ONNX Runtime).

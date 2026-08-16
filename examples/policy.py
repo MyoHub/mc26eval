@@ -1,16 +1,24 @@
 """
-MyoChallenge 2026 — Policy contract.
+MyoChallenge 2026 — Policy contract (Docker agent images).
 
-Your submission zip MUST contain a file named policy.py at its root.
+Your Docker agent image MUST expose a file named policy.py under /policy or /app.
 That file MUST define a class named Policy with the interface below.
 
 The evaluation harness will:
-  1. Add /policy (your unzipped submission) to sys.path
+  1. Add /policy (your agent mount) to sys.path
   2. Run:  from policy import Policy; p = Policy(); p.reset()
   3. Step: action = p.get_action(obs)  for every environment step
 
-Any additional files in your zip (weights, configs, etc.) are available
-relative to the same directory as policy.py.
+Any additional files in the image next to policy.py (weights, configs, your own
+.py modules) are available relative to the same directory as policy.py.
+
+Dependencies:
+  - Libraries come from the *task eval image* and/or packages you install in the
+    agent Dockerfile — not from a bare requirements.txt at score time.
+  - Do not ship a host venv/site-packages or expect requirements.txt to be installed.
+  - Allowed imports per task: tutorials/SUBMISSION_DEPENDENCIES.md
+  - Build/push guide: DOCKER_SUBMISSION.md
+  - First-time submit: tutorials/NEWBIE_QUICKSTART.md
 """
 
 from pathlib import Path
@@ -24,7 +32,7 @@ class Policy:
     """Minimal example — replace with your trained policy."""
 
     def __init__(self):
-        # Load weights from a file bundled in the zip, e.g.:
+        # Load weights from a file bundled next to policy.py, e.g.:
         # weights_path = Path(__file__).parent / "weights.npz"
         # self.weights = np.load(weights_path)
         self._action_dim = get_action_dim()

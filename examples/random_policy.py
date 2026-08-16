@@ -1,6 +1,6 @@
-"""Minimal random policy — baseline to verify the submission pipeline on any task.
+"""Minimal random policy — baseline to verify the Docker submission pipeline on any task.
 
-Bundle policy_utils.py and task_config.json in your zip alongside policy.py.
+Copy policy_utils.py and task_config.json into /policy alongside policy.py.
 """
 
 import numpy as np

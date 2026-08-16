@@ -2,6 +2,12 @@
 
 End-to-end guide for **MyoChallenge 2026 Phase 1 — Elbow Flexion**.
 
+> First time submitting? Do the 15-minute baseline first:
+> [NEWBIE_QUICKSTART.md](NEWBIE_QUICKSTART.md).  
+> Why ONNX instead of shipping torch in a Docker agent?
+> [SUBMISSION_DEPENDENCIES.md](SUBMISSION_DEPENDENCIES.md) — the elbow eval image
+> does **not** include PyTorch; export ONNX after training (or install torch in your own image).
+
 You will:
 
 1. Train a policy (Stable-Baselines3 **or** mjlab)
@@ -62,7 +68,9 @@ After inference, activations are **clipped to `[0, 1]`**. Train and export so ac
 Verify locally before submitting:
 
 ```bash
-pip install onnxruntime numpy
+pip install -U onnxruntime numpy
+python ../scripts/smoke_test_onnx.py elbow_model.onnx --task elbowflexion
+# or:
 python - <<'EOF'
 import numpy as np
 import onnxruntime as ort
@@ -232,6 +240,7 @@ evalmc submit-onnx exports/elbow_model.onnx -t elbowflexion -p 1
 - [ ] ONNX input rank-2: `[1, 9]` for a single step
 - [ ] ONNX output rank-2: `[1, 6]`
 - [ ] Actions in `[0, 1]` (or accept server-side clipping)
+- [ ] Local smoke: `python scripts/smoke_test_onnx.py your_model.onnx --task elbowflexion`
 - [ ] `evalmc submit-onnx ... -t elbowflexion -p 1` returns a submission ID
 - [ ] Score appears on the leaderboard after async evaluation (usually a few minutes)
 
@@ -256,6 +265,6 @@ evalmc submit-onnx exports/elbow_model.onnx -t elbowflexion -p 1
 | [`examples/train_sb3_elbow.py`](../examples/train_sb3_elbow.py) | Minimal SB3 PPO training script |
 | [`examples/export_sb3_onnx.py`](../examples/export_sb3_onnx.py) | SB3 checkpoint → ONNX (`obs` / `action`) |
 | [`examples/export_elbow_onnx.py`](../examples/export_elbow_onnx.py) | Constant 0.5 baseline ONNX (smoke test only) |
-| [`examples/task_config.json`](../examples/task_config.json) | Local dims for zip-based policies |
+| [`examples/task_config.json`](../examples/task_config.json) | Local dims for `policy.py` / Docker agents |
 
-For zip-based submission (Python `policy.py` instead of ONNX), see the [main README](../README.md).
+For Docker submission (Python `policy.py` instead of ONNX), see [DOCKER_SUBMISSION.md](../DOCKER_SUBMISSION.md).

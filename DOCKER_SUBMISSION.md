@@ -1,14 +1,17 @@
 # Docker submission (advanced)
 
-Use Docker only when your policy needs a custom base image, system packages, or a Python environment that cannot ship in a zip.
+Use Docker when your policy needs a custom base image, system packages, a Python
+`policy.py` wrapper, or libraries beyond a standalone ONNX upload.
 
-For **Elbow Flexion phase 1**, prefer:
+Prefer ONNX when possible — and check the
+[allowed import list](tutorials/SUBMISSION_DEPENDENCIES.md) before choosing Docker:
 
 ```bash
 evalmc submit-onnx model.onnx -t elbowflexion -p 1
-# or
-evalmc submit policy.zip -t elbowflexion -p 1
+evalmc submit-onnx model.onnx -t chasetag -p 1
 ```
+
+New to submissions? Start with [tutorials/NEWBIE_QUICKSTART.md](tutorials/NEWBIE_QUICKSTART.md).
 
 ## Image contract
 
@@ -48,7 +51,7 @@ evalmc push myteam-elbowflexion-p1:latest -t elbowflexion -p 1
 | **Production** (`api.mc.myosuite.org`) | CLI obtains ECR credentials; you `docker push` to AWS. The eval worker pulls from ECR. |
 | **Local dev** (`localhost`) | Image tag is recorded directly; the eval worker on the same machine must have that tag. |
 
-Pushing a **local-only** Docker tag to the production API will record a submission, but evaluation will fail because remote workers cannot see images on your laptop. The CLI warns about this — use zip or ONNX instead.
+Pushing a **local-only** Docker tag to the production API will record a submission, but evaluation will fail because remote workers cannot see images on your laptop. The CLI warns about this — use ONNX instead, or complete the ECR push flow.
 
 ## Commands
 
@@ -67,7 +70,10 @@ evalmc push my-image:tag -t elbowflexion -p 1 --skip-policy-check
 ## When Docker makes sense
 
 - Proprietary CUDA stacks or compiled dependencies
-- Large conda environments that are awkward to zip
+- Packages **not** listed in [SUBMISSION_DEPENDENCIES.md](tutorials/SUBMISSION_DEPENDENCIES.md)
+- Large conda environments
 - Non-Python inference runtimes
+- Custom Python around weights (`policy.py` with multi-file checkpoints)
 
-For standard PyTorch / NumPy policies, **zip submission is simpler and faster**.
+For standard obs→action graphs, **ONNX is simpler and faster** — do not use Docker
+just to ship a bare inference model.
