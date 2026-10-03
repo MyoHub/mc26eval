@@ -1,7 +1,7 @@
 {
   "task": "chasetag",
   "phase": 1,
-  "env_id": "myoChallengeChaseTagVsFullbody-v0",
+  "env_id": "myoChallengeChaseTagFBVs-v0",
   "action_dim": 354,
   "obs_dim": 546,
   "notes": "Submission Policy controls agent_0; eval harness runs built-in opponent for agent_1."

@@ -106,7 +106,7 @@ allowed import list per task when you ship `policy.py` in a Docker image.
 | Task | CLI name | Phase | Status | Environment |
 |---|---|---|---|---|
 | **Elbow Flexion** | `elbowflexion` | 1 | **Live** | `myoElbowPose1D6MRandom-v0` |
-| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagVsFullbody-v0` |
+| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagFBVs-v0` |
 | Boxing | `boxing` | 1 | Coming soon | `myoChallengeBoxingP0-v0` |
 | Fencing | `fencing` | 1 | Coming soon | `myoChallengeSaberP0-v0` |
 
@@ -197,8 +197,8 @@ evalmc push myteam-elbowflexion-p1:latest -t elbowflexion -p 1
 Install MyoSuite from the **`ms3`** branch:
 
 ```bash
-git clone --recursive -b ms3 https://github.com/MyoHub/myosuite.git
-cd myosuite && pip install -e . && python -m myosuite_init
+git clone -b ms3 https://github.com/MyoHub/myosuite.git
+cd myosuite && pip install -e .
 python -m myosuite.utils.examine_env --env_name myoElbowPose1D6MRandom-v0
 ```
 

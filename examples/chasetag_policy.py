@@ -1,6 +1,6 @@
 """ChaseTag baseline: MuscleMimic directional BC policy (repo showcase).
 
-Matches ``myosuite4/scripts/render_policies.py`` 1v1 protocol:
+Matches MyoSuite ms3 directional BC 1v1 protocol:
   - ``policy_bc_best.pt`` ActorCritic (528-dim obs, 354 act)
   - Motion-clip spawn so agents start upright
   - Heading command toward (chase) or away from (evade) the opponent

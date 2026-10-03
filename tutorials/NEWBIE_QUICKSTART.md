@@ -94,8 +94,8 @@ Needs MyoSuite [`ms3`](https://github.com/MyoHub/myosuite/tree/ms3):
 
 ```bash
 # one-time MyoSuite install
-git clone --recursive -b ms3 https://github.com/MyoHub/myosuite.git
-cd myosuite && pip install -e . && python -m myosuite_init && cd -
+git clone -b ms3 https://github.com/MyoHub/myosuite.git
+cd myosuite && pip install -e . && cd -
 
 # from mc26eval/examples (policy.py already copied)
 python ../scripts/smoke_test_policy.py --task elbowflexion

@@ -24,7 +24,7 @@ TASKS = {
         "action_dim": 6,
     },
     "chasetag": {
-        "env_id": "myoChallengeChaseTagVsFullbody-v0",
+        "env_id": "myoChallengeChaseTagFBVs-v0",
         "config": "chasetag_task_config.json",
         "obs_dim": 546,
         "action_dim": 354,

@@ -40,10 +40,9 @@ evalmc status
 Required for local roll-outs and SB3 training:
 
 ```bash
-git clone --recursive -b ms3 https://github.com/MyoHub/myosuite.git
+git clone -b ms3 https://github.com/MyoHub/myosuite.git
 cd myosuite
 pip install -e .
-python -m myosuite_init
 ```
 
 Smoke-test the environment:
