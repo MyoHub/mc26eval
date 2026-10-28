@@ -74,8 +74,8 @@ Configured in `mcEvalProd/config/challenges/2026.yaml`:
 - Only ChaseTag Phase 1 is visible; Elbow Flexion / Boxing / Fencing are hidden
 - ChaseTag: `evaluation_mode: title_cycle`, `access_mode: invitational`
 - Two scheduled windows (America/New_York), `auto_run_tournament: true`:
-  - Cycle 1: Mon Sep 14 08:00 → Thu Sep 17 08:00 (freeze + finals)
-  - Cycle 2: Thu Sep 17 08:00 → Mon Sep 21 08:00 (freeze + finals)
+  - Cycle 1: Thu Oct 29 08:00 → Thu Oct 29 12:00 (freeze + finals)
+  - Cycle 2: Thu Oct 29 12:00 → Thu Oct 29 20:00 (freeze + finals)
 - Teams nominate a scored in-window submission for finals (else best score)
 - After deploy: `python init/init_task_phases.py`, grant teams via
   `POST /admin/task-phase/chasetag/1/access`, keep the eval worker running
