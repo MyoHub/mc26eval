@@ -8,6 +8,7 @@ Train a controller for physiologically realistic musculoskeletal simulation and 
 | **Leaderboard** | [mc26.myosuite.org](https://mc26.myosuite.org) |
 | **MyoSuite** | [`ms3` branch](https://github.com/MyoHub/myosuite/tree/ms3) (Gymnasium API) |
 | **CLI** | `pip install evalmc` |
+| **Colab** | [ChaseTag quickstart](https://colab.research.google.com/github/MyoHub/myosuite/blob/dev/tutorials/5.6_ChaseTag_MyoChallenge.ipynb) |
 
 ---
 
@@ -106,7 +107,7 @@ allowed import list per task when you ship `policy.py` in a Docker image.
 | Task | CLI name | Phase | Status | Environment |
 |---|---|---|---|---|
 | **Elbow Flexion** | `elbowflexion` | 1 | **Live** | `myoElbowPose1D6MRandom-v0` |
-| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagFBVs-v0` |
+| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagFBVs-v0` (`musclemimic_models==1.0.5`) |
 | Boxing | `boxing` | 1 | Coming soon | `myoChallengeBoxingP0-v0` |
 | Fencing | `fencing` | 1 | Coming soon | `myoChallengeSaberP0-v0` |
 
@@ -115,7 +116,7 @@ allowed import list per task when you ship `policy.py` in a Docker image.
 | Task | obs shape | action shape | Notes |
 |---|---|---|---|
 | Elbow flexion (phase 1) | `(9,)` | `(6,)` | Muscle activations clipped to `[0, 1]` |
-| ChaseTag (phase 1) | `(546,)` | `(354,)` | You control `agent_0`; harness opponent is `agent_1`. Role one-hot is the last 2 dims. |
+| ChaseTag (phase 1) | `(546,)` | `(354,)` | You control `agent_0`; opponent is `agent_1`. Last 2 dims are role: `[1, 0]` chase, `[0, 1]` evade. Do not infer role from opponent hip. |
 | Table tennis (phase 1) | `(78,)` | `(39,)` | Future task |
 | Soccer (phase 1) | `(78,)` | `(39,)` | Future task |
 

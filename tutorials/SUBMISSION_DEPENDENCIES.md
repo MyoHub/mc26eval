@@ -87,7 +87,7 @@ PyTorch in the elbow image.
 | `torch` | Load `.pt` checkpoints, inference |
 | `stable_baselines3` | Load SB3 zip checkpoints |
 | `onnxruntime` | Bare ONNX submissions |
-| `musclemimic_models` | MuscleMimic baselines |
+| `musclemimic_models==1.0.5` | Scored ChaseTag FBVs body (do not use 1.0.6 unless forced; see MyoSuite #579) |
 | `huggingface_hub` | Fetching published clips/models **at image build time only** — your policy must not download at eval time |
 | `gymnasium`, `mujoco`, MyoSuite | Harness-side |
 
