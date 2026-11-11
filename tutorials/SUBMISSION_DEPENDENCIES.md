@@ -69,7 +69,7 @@ If you need something else → export to ONNX or install it in your Docker agent
 | `onnxruntime` | ONNX inference (also used by the harness for bare `.onnx`) |
 | `gymnasium` | Env API (harness-side; optional in your policy) |
 | `mujoco` | Physics (harness-side) |
-| MyoSuite (`ms3`) | Environment (harness-side) |
+| MyoSuite (`>=3.1.0`) | Environment (harness-side) |
 
 Safe imports for elbow `policy.py` agents that rely on the eval image: `numpy`,
 stdlib, your own modules, and loading weights with **numpy** (`.npz`) without
@@ -81,18 +81,21 @@ PyTorch in the elbow image.
 
 ### ChaseTag (`chasetag`)
 
+Scored env: `myoChallengeChaseTagFBVs-v0` on myo_sim **`myofullbody`** (MyoSuite
+3.1+), **10 s** episodes. Obs/action stay `(546,)` / `(354,)`. No
+`musclemimic_models` pin for scoring.
+
 | Package | Typical use |
 |---|---|
 | `numpy` | Arrays |
-| `torch` | Load `.pt` checkpoints, inference |
-| `stable_baselines3` | Load SB3 zip checkpoints |
-| `onnxruntime` | Bare ONNX submissions |
-| `musclemimic_models==1.0.5` | Scored ChaseTag FBVs body (do not use 1.0.6 unless forced; see MyoSuite #579) |
-| `huggingface_hub` | Fetching published clips/models **at image build time only** — your policy must not download at eval time |
-| `gymnasium`, `mujoco`, MyoSuite | Harness-side |
+| `onnxruntime` | Bare ONNX submissions (recommended) |
+| `huggingface_hub` | Fetching published baselines **at image build / train time only** — your policy must not download at eval time |
+| `gymnasium`, `mujoco`, MyoSuite `>=3.1.0`, `myo-sim` | Harness-side |
 
 Safe imports for ChaseTag agents using the eval image: the table above + your own
-modules + checkpoint files next to `policy.py`.
+modules + weight files next to `policy.py`. Prefer exporting ONNX via tutorial
+5.6 (`export_fbvs_onnx` / `load_fbvs_player`) rather than shipping Torch in the
+agent image.
 
 ---
 
@@ -127,7 +130,7 @@ Harness behaviour:
 | Task | Input | Output | Notes |
 |---|---|---|---|
 | Elbow flexion | `obs` `[B, 9]` | `action` `[B, 6]` | Clipped to `[0, 1]` after inference |
-| ChaseTag | `obs` `[B, 546]` | `action` `[B, 354]` | You control `agent_0` |
+| ChaseTag | `obs` `[B, 546]` | `action` `[B, 354]` | You control `agent_0`; 10 s episodes on `myofullbody` |
 
 ---
 

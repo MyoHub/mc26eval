@@ -12,13 +12,14 @@ Runnable templates for MyoChallenge 2026 submissions. Start with the workflow th
 | [`policy.py`](policy.py) | Documented `Policy` class template — copy into a Docker agent image |
 | [`random_policy.py`](random_policy.py) | Random muscle activations — fastest local / Docker smoke test |
 | [`elbow_policy.py`](elbow_policy.py) | Constant 0.5 activations — deterministic baseline |
-| [`chasetag_policy.py`](chasetag_policy.py) | SB3 chaser/runner wrapper for full-body ChaseTag |
-| [`chasetag_task_config.json`](chasetag_task_config.json) | Local config for ChaseTag (`obs_dim=546`, `action_dim=354`) |
+| [`chasetag_policy.py`](chasetag_policy.py) | ONNX ChaseTag player wrapper (`model.onnx`, 546→354) |
+| [`chasetag_task_config.json`](chasetag_task_config.json) | Local config for ChaseTag (`obs_dim=546`, `action_dim=354`, 10 s) |
 | [`policy_utils.py`](policy_utils.py) | Resolves action dimension from `task_config.json` or eval harness metadata |
 | [`task_config.json`](task_config.json) | Local dev config for elbow flexion (`obs_dim=9`, `action_dim=6`) |
 | [`export_elbow_onnx.py`](export_elbow_onnx.py) | Writes a valid test `.onnx` for the elbow flexion contract |
 | [`train_sb3_elbow.py`](train_sb3_elbow.py) | Train elbow flexion with Stable-Baselines3 PPO |
 | [`export_mjlab_onnx.py`](export_mjlab_onnx.py) | Export mjlab/RSL-RL actor → ONNX (MyoSuite helpers when installed) |
+| [`export_chasetag_directional_onnx.py`](export_chasetag_directional_onnx.py) | Tutorial 5.4 walker → ChaseTag ONNX via `export_fbvs_onnx` |
 
 Full walkthroughs:
 
@@ -72,7 +73,7 @@ evalmc submit-onnx elbow_model.onnx -t elbowflexion -p 1
 
 ```bash
 cp random_policy.py policy.py
-python ../scripts/smoke_test_policy.py --task elbowflexion   # needs MyoSuite ms3
+python ../scripts/smoke_test_policy.py --task elbowflexion   # needs MyoSuite >=3.1.0
 docker build -t myteam-elbowflexion-p1:latest -f- . <<'EOF'
 FROM python:3.10-slim
 WORKDIR /policy
@@ -91,7 +92,7 @@ cp random_policy.py policy.py   # or your own policy.py
 python ../scripts/smoke_test_policy.py --task elbowflexion
 ```
 
-Requires MyoSuite [`ms3`](https://github.com/MyoHub/myosuite/tree/ms3). See the [main README](../README.md#local-development) for install steps.
+Requires MyoSuite **3.1+** (`pip install -U 'myosuite>=3.1.0'`). See the [main README](../README.md#local-development).
 
 ## What goes in a Docker agent image?
 

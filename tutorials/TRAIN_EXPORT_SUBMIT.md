@@ -35,20 +35,20 @@ evalmc login
 evalmc status
 ```
 
-### MyoSuite (`ms3` branch)
+### MyoSuite (3.1+)
 
 Required for local roll-outs and SB3 training:
 
 ```bash
-git clone -b ms3 https://github.com/MyoHub/myosuite.git
-cd myosuite
-pip install -e .
+pip install -U 'myosuite>=3.1.0'
 ```
 
 Smoke-test the environment:
 
 ```bash
-python -m myosuite.utils.examine_env --env_name myoElbowPose1D6MRandom-v0
+python -c "from myosuite import make_env; make_env('myoElbowPose1D6MRandom-v0')"
+# ChaseTag (myofullbody, 10 s):
+python -c "from myosuite import make_env; make_env('myoChallengeChaseTagFBVs-v0')"
 ```
 
 ---
@@ -157,7 +157,7 @@ git clone https://github.com/MyoHub/mjlab_myosuite.git
 cd mjlab_myosuite
 uv venv && source .venv/bin/activate   # or: python -m venv .venv
 uv pip install -e .
-uv pip install "myosuite @ git+https://github.com/MyoHub/myosuite.git@ms3"
+uv pip install 'myosuite>=3.1.0'
 # mjlab itself — follow mjlab_myosuite README for CUDA group if using GPU
 ```
 

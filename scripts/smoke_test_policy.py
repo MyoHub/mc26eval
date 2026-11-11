@@ -6,7 +6,7 @@ Usage (from mc26eval/examples, with policy.py present):
   python ../scripts/smoke_test_policy.py --task elbowflexion
   python ../scripts/smoke_test_policy.py --task chasetag --max-steps 50
 
-Requires MyoSuite (ms3) installed and importable.
+Requires MyoSuite (>=3.1.0) installed and importable.
 """
 
 from __future__ import annotations
@@ -75,7 +75,7 @@ def main() -> int:
     except ImportError as exc:
         print(f"ERROR: missing dependency: {exc}", file=sys.stderr)
         print(
-            "Install MyoSuite ms3: https://github.com/MyoHub/myosuite/tree/ms3",
+            "Install MyoSuite: pip install -U 'myosuite>=3.1.0'",
             file=sys.stderr,
         )
         return 1

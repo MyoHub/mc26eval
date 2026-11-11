@@ -84,18 +84,17 @@ beyond a standalone ONNX upload. Full guide: [DOCKER_SUBMISSION.md](../DOCKER_SU
 ```bash
 cd examples
 cp random_policy.py policy.py
-# optional local roll-out (needs MyoSuite ms3):
+# optional local roll-out (needs MyoSuite >=3.1.0):
 #   python ../scripts/smoke_test_policy.py --task elbowflexion
 ```
 
 ### B2. Local smoke test (optional but recommended)
 
-Needs MyoSuite [`ms3`](https://github.com/MyoHub/myosuite/tree/ms3):
+Needs MyoSuite **3.1+**:
 
 ```bash
 # one-time MyoSuite install
-git clone -b ms3 https://github.com/MyoHub/myosuite.git
-cd myosuite && pip install -e . && cd -
+pip install -U 'myosuite>=3.1.0'
 
 # from mc26eval/examples (policy.py already copied)
 python ../scripts/smoke_test_policy.py --task elbowflexion

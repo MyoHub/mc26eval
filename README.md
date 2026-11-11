@@ -6,9 +6,9 @@ Train a controller for physiologically realistic musculoskeletal simulation and 
 |---|---|
 | **Register** | [mc26.myosuite.org](https://mc26.myosuite.org) |
 | **Leaderboard** | [mc26.myosuite.org](https://mc26.myosuite.org) |
-| **MyoSuite** | [`ms3` branch](https://github.com/MyoHub/myosuite/tree/ms3) (Gymnasium API) |
+| **MyoSuite** | [`3.1.0`](https://github.com/MyoHub/myosuite) (`pip install -U 'myosuite>=3.1.0'`) |
 | **CLI** | `pip install evalmc` |
-| **Colab** | [ChaseTag quickstart](https://colab.research.google.com/github/MyoHub/myosuite/blob/dev/tutorials/5.6_ChaseTag_MyoChallenge.ipynb) |
+| **Colab** | [ChaseTag 5.6](https://colab.research.google.com/github/MyoHub/myosuite/blob/dev/tutorials/5.6_ChaseTag_MyoChallenge.ipynb) · [directional 5.4](https://colab.research.google.com/github/MyoHub/myosuite/blob/dev/tutorials/5.4_MuscleMimic_Directional_Locomotion.ipynb) |
 
 ---
 
@@ -107,7 +107,7 @@ allowed import list per task when you ship `policy.py` in a Docker image.
 | Task | CLI name | Phase | Status | Environment |
 |---|---|---|---|---|
 | **Elbow Flexion** | `elbowflexion` | 1 | **Live** | `myoElbowPose1D6MRandom-v0` |
-| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagFBVs-v0` (`musclemimic_models==1.0.5`) |
+| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagFBVs-v0` (myo_sim `myofullbody`, 10 s) |
 | Boxing | `boxing` | 1 | Coming soon | `myoChallengeBoxingP0-v0` |
 | Fencing | `fencing` | 1 | Coming soon | `myoChallengeSaberP0-v0` |
 
@@ -116,7 +116,7 @@ allowed import list per task when you ship `policy.py` in a Docker image.
 | Task | obs shape | action shape | Notes |
 |---|---|---|---|
 | Elbow flexion (phase 1) | `(9,)` | `(6,)` | Muscle activations clipped to `[0, 1]` |
-| ChaseTag (phase 1) | `(546,)` | `(354,)` | You control `agent_0`; opponent is `agent_1`. Last 2 dims are role: `[1, 0]` chase, `[0, 1]` evade. Do not infer role from opponent hip. |
+| ChaseTag (phase 1) | `(546,)` | `(354,)` | You control `agent_0`; opponent is `agent_1`. Last 2 dims are role: `[1, 0]` chase, `[0, 1]` evade. Episodes last 10 s. Do not infer role from opponent hip. |
 | Table tennis (phase 1) | `(78,)` | `(39,)` | Future task |
 | Soccer (phase 1) | `(78,)` | `(39,)` | Future task |
 
@@ -195,12 +195,13 @@ evalmc push myteam-elbowflexion-p1:latest -t elbowflexion -p 1
 
 ## Local development
 
-Install MyoSuite from the **`ms3`** branch:
+Install **MyoSuite 3.1+** (ChaseTag scored body is myo_sim `myofullbody`):
 
 ```bash
-git clone -b ms3 https://github.com/MyoHub/myosuite.git
-cd myosuite && pip install -e .
-python -m myosuite.utils.examine_env --env_name myoElbowPose1D6MRandom-v0
+pip install -U 'myosuite>=3.1.0'
+python -c "from myosuite import make_env; make_env('myoChallengeChaseTagFBVs-v0')"
+# or elbow:
+python -c "from myosuite import make_env; make_env('myoElbowPose1D6MRandom-v0')"
 ```
 
 Test a `policy.py` locally before baking it into a Docker image:

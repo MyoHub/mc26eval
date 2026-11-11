@@ -4,5 +4,5 @@
   "env_id": "myoChallengeChaseTagFBVs-v0",
   "action_dim": 354,
   "obs_dim": 546,
-  "notes": "Submission Policy controls agent_0; eval harness runs built-in opponent for agent_1."
+  "notes": "Submission Policy controls agent_0; MyoSuite 3.1+ myofullbody, 10 s episodes; eval harness runs built-in opponent for agent_1."
 }

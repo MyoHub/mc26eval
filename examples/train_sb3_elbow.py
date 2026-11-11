@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Train a PPO policy for elbow flexion with Stable-Baselines3.
 
-Requires MyoSuite ms3:
-  git clone -b ms3 https://github.com/MyoHub/myosuite.git && pip install -e .
+Requires MyoSuite >=3.1.0:
+  pip install -U 'myosuite>=3.1.0'
 
 Usage:
   python train_sb3_elbow.py --timesteps 200000 --save-dir runs/elbow_sb3
