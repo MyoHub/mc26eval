@@ -36,8 +36,10 @@ python scripts/smoke_test_onnx.py chasetag.onnx
 
 Then test behavior in the MyoSuite environment and verify both chase and evade
 roles before submitting. The repository's `scripts/smoke_test_policy.py` runs a
-Docker-style `policy.py` wrapper against the ChaseTag environment; it is not a
-substitute for evaluating both roles or measuring competitive performance.
+local `policy.py` wrapper (for example, one that calls your ONNX model) against
+the ChaseTag environment for debugging only; it is not a substitute for
+evaluating both roles or measuring competitive performance, and only the ONNX
+file is submitted.
 
 ## Submit
 
@@ -47,4 +49,4 @@ evalmc submit-onnx examples/artifacts/chasetag_walker.onnx -t chasetag -p 1
 
 Run from the repository root; `evalmc` rejects a missing path. Replace the model path if you want to submit your own export.
 
-For Python policies or additional dependencies, package your policy in Docker and use `evalmc push`; see [Docker submission](../DOCKER_SUBMISSION.md).
+ONNX is the only accepted submission format. Any preprocessing your policy needs must be exported as part of the ONNX graph.

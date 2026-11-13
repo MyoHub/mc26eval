@@ -14,14 +14,14 @@
 
 ![ChaseTag uses one policy for both chase and evade roles](docs/chasetag-roles.svg)
 
-**On this page:** [Start](#start-here) · [Submission formats](#pick-a-format) · [Task contract](#task-contract) · [Title cycle](#title-cycle) · [Training](#train-and-test)
+**On this page:** [Start](#start-here) · [Submission format](#submission-format) · [Task contract](#task-contract) · [Title cycle](#title-cycle) · [Training](#train-and-test)
 
 ## Start here
 
 ```mermaid
 flowchart LR
   A[Register team] --> B[Install evalmc]
-  B --> C[Choose ONNX or Docker]
+  B --> C[Export policy to ONNX]
   C --> D[Submit]
   D --> E[Track evaluation]
 ```
@@ -36,7 +36,7 @@ flowchart LR
    evalmc status
    ```
 
-3. Submit an ONNX model (recommended):
+3. Submit an ONNX model:
 
    ```bash
    evalmc submit-onnx examples/artifacts/chasetag_walker.onnx -t chasetag -p 1
@@ -47,14 +47,20 @@ flowchart LR
 
 New to submissions? Follow the [ChaseTag quickstart](tutorials/NEWBIE_QUICKSTART.md).
 
-## Pick a format
+## Submission format
 
-| Format | Use it when | Submit |
+**ONNX is the only accepted submission format.** Export your policy as a single ONNX inference graph and submit it with:
+
+```bash
+evalmc submit-onnx model.onnx -t chasetag -p 1
+```
+
+| Tensor | Shape | Type |
 |---|---|---|
-| **ONNX** | Your policy is a single inference graph | `evalmc submit-onnx examples/artifacts/chasetag_walker.onnx -t chasetag -p 1` |
-| **Docker** | You need Python code, multiple files, or extra packages | `evalmc push image:tag -t chasetag -p 1` |
+| input `obs` | `[batch, 546]` | `float32` |
+| output `action` | `[batch, 354]` | `float32` |
 
-The Docker agent image must contain `policy.py` and/or `model.onnx` under `/policy` or `/app`. Docker submissions to production use the CLI’s ECR flow; a local-only image tag cannot be pulled by remote workers. See [Docker submission](DOCKER_SUBMISSION.md).
+Any preprocessing (normalization, role handling) must be part of the exported graph. See the [ONNX submission contract](tutorials/SUBMISSION_DEPENDENCIES.md) for details.
 
 ## Task contract
 
@@ -93,11 +99,10 @@ python -m pip install -U 'myosuite>=3.1.0'
 python -c "from myosuite import make_env; env=make_env('myoChallengeChaseTagFBVs-v0'); print(env.observation_space, env.action_space); env.close()"
 ```
 
-See [training, checkpoint, and export](tutorials/TRAIN_EXPORT_SUBMIT.md) for the MyoSuite ChaseTag Colab workflow and [dependency guidance](tutorials/SUBMISSION_DEPENDENCIES.md) for Docker policies.
+See [training, checkpoint, and export](tutorials/TRAIN_EXPORT_SUBMIT.md) for the MyoSuite ChaseTag Colab workflow and ONNX export.
 
 ## Help
 
 - [First submission guide](tutorials/NEWBIE_QUICKSTART.md)
-- [Policy imports and image contents](tutorials/SUBMISSION_DEPENDENCIES.md)
-- [Docker image submission](DOCKER_SUBMISSION.md)
+- [ONNX submission contract](tutorials/SUBMISSION_DEPENDENCIES.md)
 - [MyoChallenge support discussions](https://github.com/MyoHub/myosuite/discussions)

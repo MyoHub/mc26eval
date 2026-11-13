@@ -1,26 +1,14 @@
-# ChaseTag policy dependencies
+# ChaseTag ONNX submission contract
 
-Use a standalone ONNX model when possible. ONNX submissions contain only the model file, so you do not choose Python imports or build an agent image.
+**ONNX is the only accepted submission format.** A submission is a single `.onnx` file: no Python code, extra files, or packages are installed or run alongside it.
 
-For Docker submissions, your policy can import packages already present in the ChaseTag evaluation image, or install additional packages in your own Dockerfile.
-
-## Policy image contract
-
-Put `policy.py` and/or `model.onnx` under `/policy` or `/app`. Include every helper module and checkpoint your policy loads. The evaluator does not install a bare `requirements.txt` and policy containers have no network access during evaluation.
-
-| Include in image | Example |
-|---|---|
-| Policy entrypoint | `policy.py` or `model.onnx` |
-| Your Python modules | `policy_utils.py`, `models/actor.py` |
-| Model weights | `weights.pt`, `model.npz` |
-
-Do not rely on your laptop’s virtual environment, host `site-packages`, or runtime downloads.
+```bash
+evalmc submit-onnx model.onnx -t chasetag -p 1
+```
 
 ## Environment and contract
 
 ChaseTag runs `myoChallengeChaseTagFBVs-v0` on MyoSuite 3.1+ / myo_sim `myofullbody`. Episodes are 10 seconds. The observation and action shapes are `(546,)` and `(354,)` per agent.
-
-ONNX input/output:
 
 | Tensor | Shape | Type |
 |---|---|---|
@@ -29,27 +17,14 @@ ONNX input/output:
 
 Your agent controls `agent_0`. The last two observation values encode its role: `[1, 0]` is chase and `[0, 1]` is evade. Both roles occur in evaluation.
 
-## Docker `policy.py` interface
+## Packaging checklist
 
-```python
-class Policy:
-    def __init__(self):
-        # Load bundled files here.
-        ...
-
-    def reset(self):
-        # Called at the start of each episode.
-        ...
-
-    def get_action(self, obs):
-        # obs is a 1-D NumPy array; return 354 float actions.
-        ...
-```
-
-If both files are present, the harness uses `policy.py`; otherwise it runs `model.onnx` with ONNX Runtime.
+- Export everything the policy needs into the graph: observation normalization, role handling, and action scaling.
+- Keep weights embedded in the `.onnx` file (avoid external-data files).
+- The evaluator runs the model with ONNX Runtime on CPU and has no network access.
+- Check the exported file with [`scripts/smoke_test_onnx.py`](../scripts/smoke_test_onnx.py) before submitting.
 
 ## Next
 
 - [Quickstart](NEWBIE_QUICKSTART.md)
 - [Training and export](TRAIN_EXPORT_SUBMIT.md)
-- [Docker submission](../DOCKER_SUBMISSION.md)

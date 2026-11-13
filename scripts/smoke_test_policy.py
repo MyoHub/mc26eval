@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Run one ChaseTag episode with a local Docker-style policy.py."""
+"""Run one ChaseTag episode with a local policy.py wrapper (local debugging only).
+
+Submissions are ONNX models only; this script does not test the submission path.
+"""
 
 from __future__ import annotations
 

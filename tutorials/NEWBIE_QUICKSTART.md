@@ -49,21 +49,11 @@ evalmc submit-onnx examples/artifacts/chasetag_walker.onnx -t chasetag -p 1
 
 The CLI returns a submission ID. Evaluation is asynchronous; follow the status in the website’s **Submissions** tab.
 
-## Or submit a Docker agent
-
-Use Docker when your policy needs Python preprocessing, multiple weight files, or packages beyond the evaluation image. Include `policy.py` and/or `model.onnx` under `/policy` or `/app`, then:
-
-```bash
-evalmc push myteam-chasetag:latest -t chasetag -p 1
-```
-
-For production submissions, the CLI publishes the image through ECR so the remote evaluator can pull it. A local-only Docker tag is not available to production workers. See [Docker submission](../DOCKER_SUBMISSION.md).
-
 ## Before submitting
 
 - Confirm the ONNX input/output contract: `[batch, 546]` → `[batch, 354]`.
 - Make sure the policy reads the role flag and supports chase and evade.
-- Bundle every weight and helper file needed by a Docker policy.
+- ONNX is the only accepted format: fold any preprocessing into the exported graph.
 - Do not download files or call external services during evaluation.
 - Confirm your team has invitation access and the CLI points to `https://api.mc.myosuite.org`.
 
