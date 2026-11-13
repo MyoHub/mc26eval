@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" role="img" aria-labelledby="title desc">
+  <title id="title">One ChaseTag policy, two roles</title>
+  <desc id="desc">The same policy controls agent zero in balanced chase and evade episodes. The final two observation values identify the role.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#58A6FF"/></marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#3FB950"/></marker>
+  </defs>
+  <rect width="960" height="330" rx="20" fill="#0D1117"/>
+  <rect x="22" y="22" width="916" height="286" rx="16" fill="#161B22" stroke="#30363D"/>
+  <text x="480" y="57" text-anchor="middle" fill="#E6EDF3" font-family="Arial,sans-serif" font-size="20" font-weight="700">ONE POLICY · TWO ROLES</text>
+  <text x="480" y="80" text-anchor="middle" fill="#8B949E" font-family="Arial,sans-serif" font-size="13">Your agent is agent_0 in both kinds of episode</text>
+
+  <rect x="52" y="111" width="330" height="151" rx="14" fill="#0D1117" stroke="#2F81F7" stroke-width="1.5"/>
+  <text x="76" y="143" fill="#58A6FF" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">CHASE</text>
+  <text x="76" y="171" fill="#E6EDF3" font-family="Arial,sans-serif" font-size="18" font-weight="700">Close the gap. Tag to win.</text>
+  <text x="76" y="198" fill="#8B949E" font-family="Arial,sans-serif" font-size="13">Role flag</text>
+  <rect x="76" y="210" width="78" height="30" rx="7" fill="#161B22" stroke="#30363D"/>
+  <text x="115" y="230" text-anchor="middle" fill="#E6EDF3" font-family="monospace" font-size="14">[1, 0]</text>
+  <circle cx="319" cy="158" r="18" fill="#2F81F7"/><text x="319" y="164" text-anchor="middle" fill="#0D1117" font-family="Arial,sans-serif" font-size="15" font-weight="700">0</text>
+
+  <rect x="578" y="111" width="330" height="151" rx="14" fill="#0D1117" stroke="#3FB950" stroke-width="1.5"/>
+  <text x="602" y="143" fill="#3FB950" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">EVADE</text>
+  <text x="602" y="171" fill="#E6EDF3" font-family="Arial,sans-serif" font-size="18" font-weight="700">Keep clear. Avoid the tag.</text>
+  <text x="602" y="198" fill="#8B949E" font-family="Arial,sans-serif" font-size="13">Role flag</text>
+  <rect x="602" y="210" width="78" height="30" rx="7" fill="#161B22" stroke="#30363D"/>
+  <text x="641" y="230" text-anchor="middle" fill="#E6EDF3" font-family="monospace" font-size="14">[0, 1]</text>
+  <circle cx="845" cy="158" r="18" fill="#3FB950"/><text x="845" y="164" text-anchor="middle" fill="#0D1117" font-family="Arial,sans-serif" font-size="15" font-weight="700">0</text>
+
+  <rect x="405" y="139" width="150" height="96" rx="14" fill="#21262D" stroke="#484F58"/>
+  <text x="480" y="174" text-anchor="middle" fill="#E6EDF3" font-family="Arial,sans-serif" font-size="15" font-weight="700">SAME POLICY</text>
+  <text x="480" y="197" text-anchor="middle" fill="#8B949E" font-family="monospace" font-size="12">obs → action</text>
+  <path d="M397 164H385" fill="none" stroke="#58A6FF" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M563 210H575" fill="none" stroke="#3FB950" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <path d="M188 278v11h584v-11" fill="none" stroke="#484F58" stroke-width="1.5"/>
+  <text x="480" y="303" text-anchor="middle" fill="#8B949E" font-family="Arial,sans-serif" font-size="12">Balanced bouts include both roles; read the flag each step.</text>
+</svg>

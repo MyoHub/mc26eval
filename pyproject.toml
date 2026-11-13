@@ -3,18 +3,18 @@ name = "mc26eval"
 version = "0.1.0"
 description = "MyoChallenge 2026 participant examples and tutorials"
 readme = "README.md"
-requires-python = ">=3.10"
-dependencies = []
+requires-python = ">=3.11,<3.15"
+dependencies = ["myosuite>=3.1"]
 
 [project.optional-dependencies]
-onnx = ["onnx>=1.14", "numpy>=1.24,<2", "onnxruntime>=1.16"]
+onnx = ["onnx>=1.16", "numpy>=1.24", "onnxruntime>=1.20"]
 test = [
     "pytest>=7.0",
     "requests>=2.28",
-    "numpy>=1.24,<2",
-    "onnx>=1.14",
+    "numpy>=1.24",
+    "onnx>=1.16",
     "onnxscript>=0.1.0",
-    "onnxruntime>=1.16",
+    "onnxruntime>=1.20",
     "gymnasium>=0.29",
     "torch>=2.0",
     "stable-baselines3>=2.0",

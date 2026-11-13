@@ -1,279 +1,103 @@
-# MyoChallenge 2026 — Participant Guide
+# MyoChallenge 2026 · ChaseTag
 
-Train a controller for physiologically realistic musculoskeletal simulation and compete on the [leaderboard](https://mc26.myosuite.org).
+**Build a full-body policy that can both catch and evade.** Submit one controller, then compete in a balanced title-cycle format on the [MyoChallenge site](https://mc26.myosuite.org).
 
-| | |
-|---|---|
-| **Register** | [mc26.myosuite.org](https://mc26.myosuite.org) |
-| **Leaderboard** | [mc26.myosuite.org](https://mc26.myosuite.org) |
-| **MyoSuite** | [`3.1.0`](https://github.com/MyoHub/myosuite) (`pip install -U 'myosuite>=3.1.0'`) |
-| **CLI** | `pip install evalmc` |
-| **Colab** | [ChaseTag 5.6](https://colab.research.google.com/github/MyoHub/myosuite/blob/dev/tutorials/5.6_ChaseTag_MyoChallenge.ipynb) · [directional 5.4](https://colab.research.google.com/github/MyoHub/myosuite/blob/dev/tutorials/5.4_MuscleMimic_Directional_Locomotion.ipynb) |
+<div align="center">
 
----
+| Environment | Roles | Observation → action | Episode |
+|---|---|---|---|
+| `myoChallengeChaseTagFBVs-v0` | Chase + evade | `546 → 354` | 10 seconds |
 
-## Quick start (≈5 minutes)
+</div>
 
-**New to the challenge?** Follow the step-by-step guide
-[`tutorials/NEWBIE_QUICKSTART.md`](tutorials/NEWBIE_QUICKSTART.md)
-(register → local smoke test → submit). Dependency rules for Docker agent images:
-[`tutorials/SUBMISSION_DEPENDENCIES.md`](tutorials/SUBMISSION_DEPENDENCIES.md).
+**Access:** invitation-only. An organizer must approve your team before submission. The site shows current track availability and cycle status.
 
-**Phase 1 — Elbow Flexion** and **ChaseTag** are live. The fastest way to verify your
-setup is an ONNX upload (no `policy.py` required).
+![ChaseTag uses one policy for both chase and evade roles](docs/chasetag-roles.svg)
 
-### 1. Register your team
+**On this page:** [Start](#start-here) · [Submission formats](#pick-a-format) · [Task contract](#task-contract) · [Title cycle](#title-cycle) · [Training](#train-and-test)
 
-Register at [mc26.myosuite.org](https://mc26.myosuite.org) or via API:
-
-```bash
-curl -X POST https://api.mc.myosuite.org/register \
-  -H "Content-Type: application/json" \
-  -d '{"email": "team@example.com", "team_name": "MyTeam"}'
-```
-
-Save the **auth token** from the response — you need it to submit.
-
-### 2. Install and authenticate the CLI
-
-```bash
-pip install evalmc
-evalmc host --set-host https://api.mc.myosuite.org
-evalmc login          # email + auth token from registration
-evalmc status         # confirm host and team are configured
-```
-
-### 3. Submit a baseline model
-
-**ONNX** *(recommended — simplest for elbow flexion and ChaseTag)*
-
-```bash
-cd examples
-pip install onnx numpy onnxruntime   # one-time, to export + smoke-test
-python export_elbow_onnx.py -o elbow_model.onnx
-python ../scripts/smoke_test_onnx.py elbow_model.onnx --task elbowflexion
-evalmc submit-onnx elbow_model.onnx -t elbowflexion -p 1
-```
-
-Need custom Python around your weights? Build a Docker agent image and
-`evalmc push` — see [DOCKER_SUBMISSION.md](DOCKER_SUBMISSION.md) and Path B in
-[NEWBIE_QUICKSTART.md](tutorials/NEWBIE_QUICKSTART.md).
-
-You receive a **Submission ID** immediately. Scores appear on the leaderboard after async evaluation finishes. Check progress with `evalmc status` or the Submissions tab on the site.
-
-### Invitation-only tracks and title-cycle finals
-
-Some task-phases are invitation-only. Their leaderboards remain visible, but an
-organizer must approve your registered **team** before any ONNX or Docker
-submission is accepted. The site disables submission when approval is missing.
-
-For a `title_cycle` task, the mid-cycle board uses your best score. Before the
-cycle freezes, choose the scored artifact that should play in finals:
-
-```bash
-evalmc nominate -t chasetag -p 1 --submission-id 123
-```
-
-You can replace a nomination while the cycle is open. Without one, the platform
-uses your best in-window submission automatically.
-
----
-
-## Choose your submission path
+## Start here
 
 ```mermaid
-flowchart TD
-  A[Trained policy ready] --> B{Format}
-  B -->|.onnx file| E["evalmc submit-onnx"]
-  B -->|Custom Python / deps| H["evalmc push (Docker)"]
+flowchart LR
+  A[Register team] --> B[Install evalmc]
+  B --> C[Choose ONNX or Docker]
+  C --> D[Submit]
+  D --> E[Track evaluation]
 ```
 
-| Path | Best for | Command |
+1. Register at [mc26.myosuite.org](https://mc26.myosuite.org) and save your CLI token.
+2. Install and configure the CLI:
+
+   ```bash
+   pip install evalmc
+   evalmc host --set-host https://api.mc.myosuite.org
+   evalmc login
+   evalmc status
+   ```
+
+3. Submit an ONNX model (recommended):
+
+   ```bash
+   evalmc submit-onnx examples/artifacts/chasetag_walker.onnx -t chasetag -p 1
+   ```
+
+   This repo includes a tested starter model at that path. It runs in both roles but is a starter policy, not a guarantee of competitive performance. Confirm the file exists and use the local export instead if you have trained a policy. ONNX input is `[batch, 546]`; output is `[batch, 354]`.
+4. Follow the submission in the website’s **Submissions** tab. Evaluation runs asynchronously.
+
+New to submissions? Follow the [ChaseTag quickstart](tutorials/NEWBIE_QUICKSTART.md).
+
+## Pick a format
+
+| Format | Use it when | Submit |
 |---|---|---|
-| **ONNX** | Pure inference graphs (elbow flexion, ChaseTag) | `evalmc submit-onnx model.onnx -t TASK -p 1` |
-| **Docker** | Custom Python policies, non-standard deps, or base images | `evalmc push image:tag -t TASK -p 1` — see [DOCKER_SUBMISSION.md](DOCKER_SUBMISSION.md) |
+| **ONNX** | Your policy is a single inference graph | `evalmc submit-onnx examples/artifacts/chasetag_walker.onnx -t chasetag -p 1` |
+| **Docker** | You need Python code, multiple files, or extra packages | `evalmc push image:tag -t chasetag -p 1` |
 
-For most teams, **ONNX is enough**. Use Docker when you need a `policy.py` wrapper,
-libraries outside the task eval image, or a custom runtime.
+The Docker agent image must contain `policy.py` and/or `model.onnx` under `/policy` or `/app`. Docker submissions to production use the CLI’s ECR flow; a local-only image tag cannot be pulled by remote workers. See [Docker submission](DOCKER_SUBMISSION.md).
 
-**Important:** Docker agent images (and the task eval image for ONNX) supply libraries —
-see [tutorials/SUBMISSION_DEPENDENCIES.md](tutorials/SUBMISSION_DEPENDENCIES.md) for the
-allowed import list per task when you ship `policy.py` in a Docker image.
+## Task contract
 
----
+MyoSuite 3.1+ runs ChaseTag on the `myofullbody` model. Your policy controls `agent_0`; the opponent is `agent_1`. Role is included in the observation’s final two values:
 
-## Tasks
-
-| Task | CLI name | Phase | Status | Environment |
-|---|---|---|---|---|
-| **Elbow Flexion** | `elbowflexion` | 1 | **Live** | `myoElbowPose1D6MRandom-v0` |
-| **ChaseTag** | `chasetag` | 1 | **Live** | `myoChallengeChaseTagFBVs-v0` (myo_sim `myofullbody`, 10 s) |
-| Boxing | `boxing` | 1 | Coming soon | `myoChallengeBoxingP0-v0` |
-| Fencing | `fencing` | 1 | Coming soon | `myoChallengeSaberP0-v0` |
-
-### Observation and action shapes
-
-| Task | obs shape | action shape | Notes |
-|---|---|---|---|
-| Elbow flexion (phase 1) | `(9,)` | `(6,)` | Muscle activations clipped to `[0, 1]` |
-| ChaseTag (phase 1) | `(546,)` | `(354,)` | You control `agent_0`; opponent is `agent_1`. Last 2 dims are role: `[1, 0]` chase, `[0, 1]` evade. Episodes last 10 s. Do not infer role from opponent hip. |
-| Table tennis (phase 1) | `(78,)` | `(39,)` | Future task |
-| Soccer (phase 1) | `(78,)` | `(39,)` | Future task |
-
-Action dimension is resolved automatically during evaluation. For **local testing** of a
-`policy.py`, keep [`examples/task_config.json`](examples/task_config.json) next to your
-policy (see [`examples/policy_utils.py`](examples/policy_utils.py)).
-
----
-
-## ONNX submission *(primary path)*
-
-Upload a standalone `.onnx` file. The eval harness runs it directly — no Python policy wrapper.
-
-**Elbow flexion contract:** input tensor `obs` with shape `[batch, 9]`, output `action` with shape `[batch, 6]`. Activations are clipped to `[0, 1]` after inference.
-
-**ChaseTag contract:** input `obs` with shape `[batch, 546]`, output `action` with shape `[batch, 354]` (you control `agent_0` in title-cycle matches).
-
-```bash
-evalmc submit-onnx my_model.onnx -t elbowflexion -p 1
-evalmc submit-onnx chase.onnx -t chasetag -p 1
-```
-
-Export a valid elbow test model with [`examples/export_elbow_onnx.py`](examples/export_elbow_onnx.py),
-then smoke-test shapes:
-
-```bash
-python scripts/smoke_test_onnx.py examples/elbow_model.onnx --task elbowflexion
-```
-
-**Train your own policy:** see the full tutorial [`tutorials/TRAIN_EXPORT_SUBMIT.md`](tutorials/TRAIN_EXPORT_SUBMIT.md) (Stable-Baselines3 or mjlab → ONNX export → `evalmc submit-onnx`).
-
----
-
-## Docker submission (`policy.py` and/or `model.onnx`)
-
-Use Docker when you need custom Python around your model (preprocessing, multi-file
-checkpoints, packages not in the ONNX path). Your agent image must expose
-`policy.py` and/or `model.onnx` under `/policy` or `/app`.
-
-Full build and push guide: [DOCKER_SUBMISSION.md](DOCKER_SUBMISSION.md).
-
-```python
-class Policy:
-    def __init__(self):
-        pass  # load weights from files in the image (e.g. next to policy.py)
-
-    def reset(self):
-        pass  # called at the start of every episode
-
-    def get_action(self, obs: np.ndarray) -> np.ndarray:
-        ...  # return a 1-D float array, task-specific length
-```
-
-Templates and baselines live in [`examples/`](examples/README.md) — useful when building
-a Docker agent image:
-
-- [`policy.py`](examples/policy.py) — documented starter template
-- [`random_policy.py`](examples/random_policy.py) — random baseline (good local smoke test)
-- [`elbow_policy.py`](examples/elbow_policy.py) — constant mid-range activations
-- [`chasetag_policy.py`](examples/chasetag_policy.py) — SB3 chaser/runner wrapper for ChaseTag
-- [`policy_utils.py`](examples/policy_utils.py) — action sizing without hard-coded dims
-
-```bash
-# Minimal agent image, then push
-cd examples
-cp random_policy.py policy.py
-docker build -t myteam-elbowflexion-p1:latest -f- . <<'EOF'
-FROM python:3.10-slim
-WORKDIR /policy
-COPY policy.py policy_utils.py task_config.json .
-EOF
-evalmc push myteam-elbowflexion-p1:latest -t elbowflexion -p 1
-```
-
----
-
-## Local development
-
-Install **MyoSuite 3.1+** (ChaseTag scored body is myo_sim `myofullbody`):
-
-```bash
-pip install -U 'myosuite>=3.1.0'
-python -c "from myosuite import make_env; make_env('myoChallengeChaseTagFBVs-v0')"
-# or elbow:
-python -c "from myosuite import make_env; make_env('myoElbowPose1D6MRandom-v0')"
-```
-
-Test a `policy.py` locally before baking it into a Docker image:
-
-```bash
-cd examples
-cp random_policy.py policy.py   # or use your own policy.py
-python ../scripts/smoke_test_policy.py --task elbowflexion
-```
-
-Or the equivalent one-liner roll-out:
-
-```bash
-cd examples
-cp random_policy.py policy.py
-
-python - <<'EOF'
-import gymnasium as gym
-import myosuite
-import numpy as np
-from policy import Policy
-
-myosuite.register_all_envs()
-env = gym.make("myoElbowPose1D6MRandom-v0")
-policy = Policy()
-
-obs, _ = env.reset()
-policy.reset()
-terminated = truncated = False
-while not (terminated or truncated):
-    action = policy.get_action(obs)
-    obs, _, terminated, truncated, _ = env.step(action)
-env.close()
-print("Episode complete")
-EOF
-```
-
----
-
-## Rules
-
-- One active submission per team per task/phase at a time.
-- Evaluation uses held-out seeds not available to participants.
-- Policies must be self-contained — **no network access** during evaluation.
-- Any observation post-processing or action pre-processing must happen inside `get_action` (or inside the ONNX graph).
-- Docker `policy.py` submissions may only import packages listed in [SUBMISSION_DEPENDENCIES.md](tutorials/SUBMISSION_DEPENDENCIES.md) (or install them in your own agent image).
-
----
-
-## Tutorials
-
-| Guide | Audience |
+| Role values | Meaning |
 |---|---|
-| [NEWBIE_QUICKSTART.md](tutorials/NEWBIE_QUICKSTART.md) | First-time register → smoke test → submit |
-| [SUBMISSION_DEPENDENCIES.md](tutorials/SUBMISSION_DEPENDENCIES.md) | Allowed imports / what goes in a Docker agent image |
-| [TRAIN_EXPORT_SUBMIT.md](tutorials/TRAIN_EXPORT_SUBMIT.md) | Train SB3 or mjlab → ONNX → submit |
-| [DOCKER_SUBMISSION.md](DOCKER_SUBMISSION.md) | Custom libraries / CUDA / `policy.py` agents |
+| `[1, 0]` | Chase: tag the opponent to win |
+| `[0, 1]` | Evade: avoid being tagged until time expires |
 
----
+Both roles appear in balanced, shuffled bouts. Do not infer your role from the opponent’s position. ChaseTag policies trained on the older MuscleMimic body may need retraining for MyoSuite 3.1+.
 
-## Troubleshooting
+## Title cycle
 
-| Problem | Fix |
-|---|---|
-| `ModuleNotFoundError` for `torch` / `sklearn` / … | Package not in the task image — see [SUBMISSION_DEPENDENCIES.md](tutorials/SUBMISSION_DEPENDENCIES.md); export ONNX or install deps in your Docker agent image |
-| `No credentials found` | Run `evalmc login` or pass `--email` and `--auth-token` |
-| Wrong action shape locally | Add `task_config.json` next to `policy.py` (copy from `examples/`); run `scripts/smoke_test_policy.py` |
-| Docker eval fails after `evalmc push` | Remote workers cannot see images that exist only on your laptop — use ONNX, or push to ECR per [DOCKER_SUBMISSION.md](DOCKER_SUBMISSION.md) |
-| Scores not on leaderboard yet | Evaluation is async; check the Submissions tab or wait a few minutes |
+```mermaid
+flowchart LR
+  A[Mid-cycle bouts<br/>6 episodes] --> B[Freeze<br/>eligible entries seeded]
+  B --> C[Finals<br/>single elimination]
+  C --> D[Next cycle champion]
+```
 
----
+- Mid-cycle bouts use 6 episodes: 3 chase and 3 evade. Every submission faces the fixed cycle champion; a win does not take the crown.
+- Before freeze, nominate the scored submission you want considered for finals. Without a nomination, the best eligible in-window submission is used.
+- Finals bouts use 10 episodes: 5 chase and 5 evade. The defending champion is seed #1.
+- Win Rate is episode wins divided by wins plus losses; draws are excluded. The leaderboard also reports role-specific rates and outcome counts.
+- Ties use episode wins and then earlier scoring for mid-cycle ranking. Finals draws go to overtime and the published tournament tie-break rules.
 
-## Questions
+Exact dates, access, and current cycle status are shown on the [competition site](https://mc26.myosuite.org), which is the source of truth for live operations.
 
-Open an issue in this repository or ask in [MyoHub discussions](https://github.com/MyoHub/myosuite/discussions).
+## Train and test
+
+Install MyoSuite 3.1+ to run the environment locally:
+
+```bash
+python -m pip install -U 'myosuite>=3.1.0'
+python -c "from myosuite import make_env; env=make_env('myoChallengeChaseTagFBVs-v0'); print(env.observation_space, env.action_space); env.close()"
+```
+
+See [training, checkpoint, and export](tutorials/TRAIN_EXPORT_SUBMIT.md) for the MyoSuite ChaseTag Colab workflow and [dependency guidance](tutorials/SUBMISSION_DEPENDENCIES.md) for Docker policies.
+
+## Help
+
+- [First submission guide](tutorials/NEWBIE_QUICKSTART.md)
+- [Policy imports and image contents](tutorials/SUBMISSION_DEPENDENCIES.md)
+- [Docker image submission](DOCKER_SUBMISSION.md)
+- [MyoChallenge support discussions](https://github.com/MyoHub/myosuite/discussions)
