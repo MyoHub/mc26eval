@@ -35,11 +35,7 @@ python scripts/smoke_test_onnx.py chasetag.onnx
 ```
 
 Then test behavior in the MyoSuite environment and verify both chase and evade
-roles before submitting. The repository's `scripts/smoke_test_policy.py` runs a
-local `policy.py` wrapper (for example, one that calls your ONNX model) against
-the ChaseTag environment for debugging only; it is not a substitute for
-evaluating both roles or measuring competitive performance, and only the ONNX
-file is submitted.
+roles before submitting.
 
 ## Submit
 

@@ -4,12 +4,14 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
-.test-venv/
 .env
 
 # Submission artifacts (generate locally)
 *.zip
 *.onnx
+
+# MuJoCo runtime log
+MUJOCO_LOG.TXT
 
 # Editor / OS
 .DS_Store
