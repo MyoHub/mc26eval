@@ -60,7 +60,7 @@ evalmc submit-onnx model.onnx -t chasetag -p 1
 | input `obs` | `[batch, 546]` | `float32` |
 | output `action` | `[batch, 354]` | `float32` |
 
-Any preprocessing (normalization, role handling) must be part of the exported graph. See the [ONNX submission contract](tutorials/SUBMISSION_DEPENDENCIES.md) for details.
+Any preprocessing (normalization, role handling) must be part of the exported graph. Recurrent policies (GRU/LSTM) can add `<name>_in` / `<name>_out` state tensors, zeroed at each episode start. See the [ONNX submission contract](tutorials/SUBMISSION_DEPENDENCIES.md) for details.
 
 ## Task contract
 
