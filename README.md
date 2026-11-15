@@ -88,7 +88,14 @@ flowchart LR
 - Before freeze, nominate the scored submission you want considered for finals. Without a nomination, the best eligible in-window submission is used.
 - Finals bouts use 10 episodes: 5 chase and 5 evade. The defending champion is seed #1.
 - Win Rate is episode wins divided by wins plus losses; draws are excluded. The leaderboard also reports role-specific rates and outcome counts.
-- Ties use episode wins and then earlier scoring for mid-cycle ranking. Finals draws go to overtime and the published tournament tie-break rules.
+- Ties use episode wins and then earlier scoring for mid-cycle ranking.
+- A finals bout tied after 10 episodes is settled by the first of these that separates the teams:
+  1. **Overtime:** 2 more episodes (one each way) from new start positions, with the players starting **back to back**.
+  2. More successful tags while chasing.
+  3. More escapes while evading.
+  4. Fewer falls while chasing.
+  5. Closest approach while chasing (smaller average closest distance to the runner).
+  6. A coin flip. Seeding is never used as a tiebreaker.
 
 Exact dates, access, and current cycle status are shown on the [competition site](https://mc26.myosuite.org), which is the source of truth for live operations.
 
