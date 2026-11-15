@@ -73,6 +73,8 @@ MyoSuite 3.1+ runs ChaseTag on the `myofullbody` model. Your policy controls `ag
 
 Both roles appear in balanced, shuffled bouts. Do not infer your role from the opponent’s position. ChaseTag policies trained on the older MuscleMimic body may need retraining for MyoSuite 3.1+.
 
+**Start positions are randomized.** In evaluation, both players' starting positions and headings vary slightly from the default MyoSuite reset in every episode. The change is mirrored, so both players get the same relative start, and each chase/evade pair of episodes shares it. The exact ranges are not published: train policies that are robust to small changes in the starting pose, not only to the default reset.
+
 ## Title cycle
 
 ```mermaid

@@ -10,6 +10,8 @@ evalmc submit-onnx model.onnx -t chasetag -p 1
 
 ChaseTag runs `myoChallengeChaseTagFBVs-v0` on MyoSuite 3.1+ / myo_sim `myofullbody`. Episodes are 10 seconds. The observation and action shapes are `(546,)` and `(354,)` per agent.
 
+**Start positions are randomized.** In evaluation, both players' starting positions and headings vary slightly from the default MyoSuite reset in every episode. The change is mirrored, so both players get the same relative start, and each chase/evade pair of episodes shares it. The exact ranges are not published: train policies that are robust to small changes in the starting pose, not only to the default reset.
+
 | Tensor | Shape | Type |
 |---|---|---|
 | `obs` | `[batch, 546]` | `float32` |
