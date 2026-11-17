@@ -87,7 +87,7 @@ flowchart LR
 - Mid-cycle bouts use 6 episodes: 3 chase and 3 evade. Every submission faces the fixed cycle champion; a win does not take the crown.
 - Before freeze, nominate the scored submission you want considered for finals. Without a nomination, the best eligible in-window submission is used.
 - Finals bouts use 10 episodes: 5 chase and 5 evade. The defending champion is seed #1.
-- Win Rate is episode wins divided by wins plus losses; draws are excluded. The leaderboard also reports role-specific rates and outcome counts.
+- Win Rate is episodes won divided by episodes decided (won + lost). Every episode ends in a tag, an escape (10 s without a tag) or a chaser fall. An episode is void only if the physics simulation becomes numerically unstable; void episodes count for nobody. The leaderboard also reports role-specific rates and outcome counts.
 - Ties use episode wins and then earlier scoring for mid-cycle ranking.
 - A finals bout tied after 10 episodes is settled by the first of these that separates the teams:
   1. **Overtime:** 2 more episodes (one each way) from new start positions, with the players starting **back to back**.
