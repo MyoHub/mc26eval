@@ -30,7 +30,7 @@ flowchart LR
 2. Install and configure the CLI:
 
    ```bash
-   pip install evalmc
+   pip install -U "evalmc[check]"
    evalmc host --set-host https://api.mc.myosuite.org
    evalmc login
    evalmc status
@@ -61,6 +61,8 @@ evalmc submit-onnx model.onnx -t chasetag -p 1
 | output `action` | `[batch, 354]` | `float32` |
 
 Any preprocessing (normalization, role handling) must be part of the exported graph. Recurrent policies (GRU/LSTM) can add `<name>_in` / `<name>_out` state tensors, zeroed at each episode start. See the [ONNX submission contract](tutorials/SUBMISSION_DEPENDENCIES.md) for details.
+
+**Resource limits.** Each match runs both players' policies and the two simulations in one container with **3 GB of memory**; a match that exceeds it is stopped and the submission fails. Keep everything (weights included) in the single `.onnx` file. Since `evalmc` 0.0.5, `submit-onnx` loads your model locally first and warns if it needs more than ~1 GB once loaded or more than 10 ms per action (large constant tables or index arrays can expand to several GB inside ONNX Runtime even when the file is small); it refuses files whose weights live in a separate `.onnx.data` file.
 
 ## Task contract
 
