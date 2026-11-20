@@ -1,0 +1,1208 @@
+<mujoco>
+  <asset>
+    <mesh name="m0" file="m0.stl"/>
+    <mesh name="m1" file="m1.stl"/>
+    <mesh name="m2" file="m2.stl"/>
+    <mesh name="m3" file="m3.stl"/>
+    <mesh name="m4" file="m4.stl"/>
+    <mesh name="m5" file="m5.stl"/>
+    <mesh name="m6" file="m6.stl"/>
+    <mesh name="m7" file="m7.stl"/>
+    <mesh name="m8" file="m8.stl"/>
+    <mesh name="m9" file="m9.stl"/>
+    <mesh name="m10" file="m10.stl"/>
+    <mesh name="m11" file="m11.stl"/>
+    <mesh name="m12" file="m12.stl"/>
+    <mesh name="m13" file="m13.stl"/>
+    <mesh name="m14" file="m14.stl"/>
+    <mesh name="m15" file="m15.stl"/>
+    <mesh name="m16" file="m16.stl"/>
+    <mesh name="m17" file="m17.stl"/>
+    <mesh name="m18" file="m18.stl"/>
+    <mesh name="m19" file="m19.stl"/>
+    <mesh name="m20" file="m20.stl"/>
+    <mesh name="m21" file="m21.stl"/>
+    <mesh name="m23" file="m23.stl"/>
+    <mesh name="m24" file="m24.stl"/>
+    <mesh name="m25" file="m25.stl"/>
+    <mesh name="m26" file="m26.stl"/>
+    <mesh name="m27" file="m27.stl"/>
+    <mesh name="m28" file="m28.stl"/>
+    <mesh name="m29" file="m29.stl"/>
+    <mesh name="m30" file="m30.stl"/>
+    <mesh name="m31" file="m31.stl"/>
+    <mesh name="m32" file="m32.stl"/>
+    <mesh name="m33" file="m33.stl"/>
+    <mesh name="m34" file="m34.stl"/>
+    <mesh name="m35" file="m35.stl"/>
+    <mesh name="m36" file="m36.stl"/>
+    <mesh name="m37" file="m37.stl"/>
+    <mesh name="m38" file="m38.stl"/>
+    <mesh name="m39" file="m39.stl"/>
+    <mesh name="m40" file="m40.stl"/>
+    <mesh name="m41" file="m41.stl"/>
+    <mesh name="m42" file="m42.stl"/>
+    <mesh name="m43" file="m43.stl"/>
+    <mesh name="m44" file="m44.stl"/>
+    <mesh name="m45" file="m45.stl"/>
+    <mesh name="m46" file="m46.stl"/>
+    <mesh name="m47" file="m47.stl"/>
+    <mesh name="m48" file="m48.stl"/>
+    <mesh name="m49" file="m49.stl"/>
+    <mesh name="m50" file="m50.stl"/>
+    <mesh name="m51" file="m51.stl"/>
+    <mesh name="m52" file="m52.stl"/>
+    <mesh name="m53" file="m53.stl"/>
+    <mesh name="m54" file="m54.stl"/>
+    <mesh name="m56" file="m56.stl"/>
+    <mesh name="m57" file="m57.stl"/>
+    <mesh name="m58" file="m58.stl"/>
+    <mesh name="m59" file="m59.stl"/>
+    <mesh name="m60" file="m60.stl"/>
+    <mesh name="m61" file="m61.stl"/>
+    <mesh name="m62" file="m62.stl"/>
+    <mesh name="m63" file="m63.stl"/>
+    <mesh name="m64" file="m64.stl"/>
+    <mesh name="m65" file="m65.stl"/>
+    <mesh name="m66" file="m66.stl"/>
+    <mesh name="m67" file="m67.stl"/>
+    <mesh name="m68" file="m68.stl"/>
+    <mesh name="m69" file="m69.stl"/>
+    <mesh name="m70" file="m70.stl"/>
+    <mesh name="m71" file="m71.stl"/>
+    <mesh name="m72" file="m72.stl"/>
+    <mesh name="m73" file="m73.stl"/>
+    <mesh name="m74" file="m74.stl"/>
+    <mesh name="m75" file="m75.stl"/>
+    <mesh name="m76" file="m76.stl"/>
+    <mesh name="m77" file="m77.stl"/>
+    <mesh name="m78" file="m78.stl"/>
+    <mesh name="m79" file="m79.stl"/>
+    <mesh name="m80" file="m80.stl"/>
+    <mesh name="m81" file="m81.stl"/>
+    <mesh name="m82" file="m82.stl"/>
+    <mesh name="m83" file="m83.stl"/>
+    <mesh name="m84" file="m84.stl"/>
+    <mesh name="m85" file="m85.stl"/>
+    <mesh name="m86" file="m86.stl"/>
+    <mesh name="m87" file="m87.stl"/>
+    <mesh name="m88" file="m88.stl"/>
+    <mesh name="m89" file="m89.stl"/>
+    <mesh name="m90" file="m90.stl"/>
+    <mesh name="m91" file="m91.stl"/>
+    <mesh name="m92" file="m92.stl"/>
+    <mesh name="m93" file="m93.stl"/>
+    <mesh name="m94" file="m94.stl"/>
+    <mesh name="m95" file="m95.stl"/>
+    <mesh name="m96" file="m96.stl"/>
+    <mesh name="m97" file="m97.stl"/>
+    <mesh name="m98" file="m98.stl"/>
+    <mesh name="m99" file="m99.stl"/>
+    <mesh name="m100" file="m100.stl"/>
+    <mesh name="m101" file="m101.stl"/>
+    <mesh name="m102" file="m102.stl"/>
+    <mesh name="m103" file="m103.stl"/>
+    <mesh name="m104" file="m104.stl"/>
+    <mesh name="m105" file="m105.stl"/>
+    <mesh name="m106" file="m106.stl"/>
+    <mesh name="m107" file="m107.stl"/>
+    <mesh name="m108" file="m108.stl"/>
+    <mesh name="m109" file="m109.stl"/>
+    <mesh name="m110" file="m110.stl"/>
+    <mesh name="m111" file="m111.stl"/>
+    <mesh name="m112" file="m112.stl"/>
+    <mesh name="m113" file="m113.stl"/>
+    <mesh name="m114" file="m114.stl"/>
+    <mesh name="m115" file="m115.stl"/>
+    <mesh name="m116" file="m116.stl"/>
+    <mesh name="m117" file="m117.stl"/>
+    <mesh name="m118" file="m118.stl"/>
+    <mesh name="m119" file="m119.stl"/>
+    <mesh name="m120" file="m120.stl"/>
+    <mesh name="m121" file="m121.stl"/>
+    <mesh name="m122" file="m122.stl"/>
+    <mesh name="m123" file="m123.stl"/>
+    <mesh name="m124" file="m124.stl"/>
+    <mesh name="m125" file="m125.stl"/>
+    <mesh name="m127" file="m127.stl"/>
+    <mesh name="m128" file="m128.stl"/>
+    <mesh name="m129" file="m129.stl"/>
+    <mesh name="m130" file="m130.stl"/>
+    <mesh name="m131" file="m131.stl"/>
+    <mesh name="m132" file="m132.stl"/>
+    <mesh name="m133" file="m133.stl"/>
+    <mesh name="m134" file="m134.stl"/>
+    <mesh name="m135" file="m135.stl"/>
+    <mesh name="m136" file="m136.stl"/>
+    <mesh name="m137" file="m137.stl"/>
+    <mesh name="m138" file="m138.stl"/>
+    <mesh name="m139" file="m139.stl"/>
+    <mesh name="m140" file="m140.stl"/>
+    <mesh name="m141" file="m141.stl"/>
+    <mesh name="m142" file="m142.stl"/>
+    <mesh name="m143" file="m143.stl"/>
+    <mesh name="m144" file="m144.stl"/>
+    <mesh name="m145" file="m145.stl"/>
+    <mesh name="m146" file="m146.stl"/>
+    <mesh name="m147" file="m147.stl"/>
+    <mesh name="m148" file="m148.stl"/>
+    <mesh name="m149" file="m149.stl"/>
+    <mesh name="m150" file="m150.stl"/>
+    <mesh name="m151" file="m151.stl"/>
+    <mesh name="m152" file="m152.stl"/>
+    <mesh name="m153" file="m153.stl"/>
+    <mesh name="m154" file="m154.stl"/>
+    <mesh name="m155" file="m155.stl"/>
+    <mesh name="m156" file="m156.stl"/>
+    <mesh name="m157" file="m157.stl"/>
+    <mesh name="m158" file="m158.stl"/>
+    <mesh name="m160" file="m160.stl"/>
+    <mesh name="m161" file="m161.stl"/>
+    <mesh name="m162" file="m162.stl"/>
+    <mesh name="m163" file="m163.stl"/>
+    <mesh name="m164" file="m164.stl"/>
+    <mesh name="m165" file="m165.stl"/>
+    <mesh name="m166" file="m166.stl"/>
+    <mesh name="m167" file="m167.stl"/>
+    <mesh name="m168" file="m168.stl"/>
+    <mesh name="m169" file="m169.stl"/>
+    <mesh name="m170" file="m170.stl"/>
+    <mesh name="m171" file="m171.stl"/>
+    <mesh name="m172" file="m172.stl"/>
+    <mesh name="m173" file="m173.stl"/>
+    <mesh name="m174" file="m174.stl"/>
+    <mesh name="m175" file="m175.stl"/>
+    <mesh name="m176" file="m176.stl"/>
+    <mesh name="m177" file="m177.stl"/>
+    <mesh name="m178" file="m178.stl"/>
+    <mesh name="m179" file="m179.stl"/>
+    <mesh name="m180" file="m180.stl"/>
+    <mesh name="m181" file="m181.stl"/>
+    <mesh name="m182" file="m182.stl"/>
+    <mesh name="m183" file="m183.stl"/>
+    <mesh name="m184" file="m184.stl"/>
+    <mesh name="m185" file="m185.stl"/>
+    <mesh name="m186" file="m186.stl"/>
+    <mesh name="m187" file="m187.stl"/>
+    <mesh name="m188" file="m188.stl"/>
+    <mesh name="m189" file="m189.stl"/>
+    <mesh name="m190" file="m190.stl"/>
+    <mesh name="m191" file="m191.stl"/>
+    <mesh name="m192" file="m192.stl"/>
+    <mesh name="m193" file="m193.stl"/>
+    <mesh name="m194" file="m194.stl"/>
+    <mesh name="m195" file="m195.stl"/>
+    <mesh name="m196" file="m196.stl"/>
+    <mesh name="m197" file="m197.stl"/>
+    <mesh name="m198" file="m198.stl"/>
+    <mesh name="m199" file="m199.stl"/>
+    <mesh name="m200" file="m200.stl"/>
+    <mesh name="m201" file="m201.stl"/>
+    <mesh name="m202" file="m202.stl"/>
+    <mesh name="m203" file="m203.stl"/>
+    <mesh name="m204" file="m204.stl"/>
+    <mesh name="m205" file="m205.stl"/>
+    <mesh name="m206" file="m206.stl"/>
+    <mesh name="m207" file="m207.stl"/>
+    <mesh name="m208" file="m208.stl"/>
+    <mesh name="m209" file="m209.stl"/>
+  </asset>
+  <worldbody>
+    <geom type="mesh" mesh="m208" pos="-6.33333 1.1966e-09 0.166667" quat="0.270598 -0.270598 0.653281 0.653281" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m208" pos="6.33333 0 0.166667" quat="0.653281 0.653281 0.270598 -0.270598" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m208" pos="8.93163e-09 6.33333 0.166667" quat="0.653281 0.270598 0.653281 0.270598" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m208" pos="8.93163e-09 -6.33333 0.166667" quat="0.270598 0.653281 -0.270598 -0.653281" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m209" pos="-6.275 -6.275 0.225" quat="0.424708 0.17592 0.339851 -0.820473" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m209" pos="6.275 -6.275 0.225" quat="0.880476 -0.115917 0.364705 -0.279848" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m209" pos="6.275 6.275 0.225" quat="0.820473 -0.339851 0.17592 0.424708" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <geom type="mesh" mesh="m209" pos="-6.275 6.275 0.225" quat="0.279848 -0.364705 -0.115917 0.880476" rgba="0.7 0.7 0.7 1" contype="0" conaffinity="0"/>
+    <body pos="-0.025 1.1 1" quat="1 0 0 0">
+      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+      <joint type="free" pos="0 0 0"/>
+      <body pos="0 0 0" quat="0.5 0.5 -0.5 -0.5">
+        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+        <geom type="mesh" mesh="m0" pos="-0.113198 0.0184269 9.23065e-06" quat="0.694832 0.695197 -0.127634 -0.132738" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+        <body pos="-0.098 0.071 0" quat="1 0 0 0">
+          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+          <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+          <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+          <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+          <geom type="mesh" mesh="m1" pos="-0.00980104 0.0107111 -2.24799e-19" quat="0.524756 0.524756 0.473953 0.473953" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+          <body pos="0.098 0.0711 0" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="slide" pos="0 0 0" axis="1 0 0" ref="0"/>
+            <joint type="slide" pos="0 0 0" axis="0 1 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+          </body>
+          <body pos="0.009 0.0321 0" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+            <geom type="mesh" mesh="m2" pos="-0.0136846 0.0165325 -2.09455e-19" quat="0.501416 0.501416 0.49858 0.49858" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+            <body pos="0.0006 0.0332 0" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+              <geom type="mesh" mesh="m3" pos="-0.0125117 0.0187478 -2.67361e-11" quat="0.465373 0.465373 0.53238 0.53238" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+              <body pos="-0.0067 0.0351 0" quat="1 0 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+                <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+                <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+                <geom type="mesh" mesh="m4" pos="-0.0118232 0.0149247 -4.48041e-19" quat="0.395403 0.395403 0.586222 0.586222" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                <body pos="-0.0114 0.0288 0" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                  <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+                  <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+                  <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+                  <geom type="mesh" mesh="m5" pos="-0.0125587 0.0159499 -2.13503e-19" quat="0.389627 0.389627 0.590077 0.590077" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                  <body pos="0.0025 -0.089 0" quat="1 0 0 0">
+                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                    <geom type="mesh" mesh="m6" pos="-0.0316303 0.128096 6.47315e-08" quat="0.346144 0.346144 0.616591 0.616591" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m7" pos="-0.0462385 0.156985 6.47431e-08" quat="0.401422 0.401422 0.582117 0.582117" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m8" pos="-0.0526331 0.183226 6.17789e-08" quat="0.419369 0.419369 0.569324 0.569324" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m9" pos="-0.0563645 0.209309 6.36268e-08" quat="0.467423 0.467423 0.530581 0.530581" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m10" pos="-0.0564934 0.233924 6.42244e-08" quat="0.462121 0.462121 0.535204 0.535204" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m11" pos="-0.0567728 0.259491 5.77253e-08" quat="0.441507 0.441507 0.552333 0.552333" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m12" pos="-0.0559048 0.279837 4.84058e-08" quat="0.444087 0.444087 0.550261 0.550261" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m13" pos="-0.0514884 0.3019 4.8637e-08" quat="0.457905 0.457905 0.538816 0.538816" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m14" pos="-0.0502432 0.324478 0.00130402" quat="0.461415 0.461415 0.535813 0.535813" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m15" pos="-0.0459608 0.347792 0.000557157" quat="0.47481 0.475046 0.524434 0.523312" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m16" pos="-0.0405909 0.368172 0.000524609" quat="0.489189 0.489772 0.510606 0.509999" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m17" pos="-0.0356729 0.386513 7.68626e-05" quat="0.523275 0.52673 0.475665 0.47168" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m18" pos="0.0141389 0.240883 0.000692138" quat="0.981096 -0.00128459 0.00483333 0.193457" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                    <body pos="-0.005 -0.01 0" quat="1 0 0 0">
+                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                      <body pos="0 0 0" quat="1 0 0 0">
+                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                        <geom type="mesh" mesh="m19" pos="-0.0170413 0.458011 0.000143403" quat="0.521029 0.447279 -0.546907 0.478918" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                        <body pos="0 0.5 0" quat="1 0 0 0">
+                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                          <geom type="mesh" mesh="m20" pos="0.0428457 -0.00300664 0.000458964" quat="0.930151 0.0010338 0.000408092 0.367176" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                          <geom type="mesh" mesh="m21" pos="0.00372986 0.0750453 -2.15629e-05" quat="0.128672 0.694522 -0.134999 0.69488" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                        </body>
+                      </body>
+                    </body>
+                    <body pos="0.02 0.37 0" quat="0.5 -0.5 0.5 0.5">
+                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                      <body pos="0 0 0" quat="0.5 0.5 -0.5 -0.5">
+                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                        <body pos="-0.03634 0.025 0" quat="1 0 0 0">
+                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                          <body pos="0.044675 -0.01807 0.025465" quat="1 0 0 0">
+                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                            <body pos="0 0 0" quat="1 0 0 0">
+                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                              <joint type="hinge" pos="0 0 0" axis="0.0153 0.989299 -0.1451" ref="0"/>
+                              <joint type="hinge" pos="0 0 0" axis="-0.994473 0 -0.104997" ref="0"/>
+                              <geom type="mesh" mesh="m23" pos="-0.0115404 0.00621639 0.0517142" quat="0.80938 -0.162931 -0.0481737 0.562171" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                              <body pos="-0.01433 0.02007 0.1355" quat="1 0 0 0">
+                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                <joint type="hinge" pos="0 0 0" axis="-0.994473 0 -0.104997" ref="0"/>
+                                <joint type="hinge" pos="0 0 0" axis="0.0153 0.989299 -0.1451" ref="0"/>
+                                <body pos="0 0 0" quat="1 0 0 0">
+                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                  <joint type="hinge" pos="0 0 0" axis="0.157095 0.947269 -0.279291" ref="0"/>
+                                  <joint type="hinge" pos="0 0 0" axis="-0.754084 0.297594 0.585487" ref="0"/>
+                                  <joint type="hinge" pos="0 0 0" axis="0.6377 0.1186 0.7611" ref="0"/>
+                                  <geom type="mesh" mesh="m24" pos="-0.0551769 -0.0374594 -0.0480278" quat="0.340433 0.869603 -0.00578757 -0.35758" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                  <body pos="-0.00955 -0.034 0.009" quat="1 0 0 0">
+                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                    <joint type="hinge" pos="0 0 0" axis="0.6377 0.1186 0.7611" ref="0"/>
+                                    <joint type="hinge" pos="0 0 0" axis="-0.754084 0.297594 0.585487" ref="0"/>
+                                    <joint type="hinge" pos="0 0 0" axis="0.157095 0.947269 -0.279291" ref="0"/>
+                                    <body pos="0 0 0" quat="1 0 0 0">
+                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                      <joint type="hinge" pos="0 0 0" axis="0.00479995 0.999089 0.0423995" ref="0"/>
+                                      <body pos="0 0 0" quat="1 0 0 0">
+                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                        <joint type="hinge" pos="0 0 0" axis="-0.998261 0.00229991 0.0588977" ref="0"/>
+                                        <joint type="hinge" pos="0 0 0" axis="0.00479995 0.999089 0.0423995" ref="0"/>
+                                        <body pos="0 0 0" quat="1 0 0 0">
+                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                          <joint type="hinge" pos="0 0 0" axis="0.00479995 0.999089 0.0423995" ref="0"/>
+                                          <geom type="mesh" mesh="m25" pos="0.000738997 -0.13714 -0.0037705" quat="0.693143 0.720688 0.0121095 -0.00391527" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                          <body pos="0.0061 -0.2904 -0.0123" quat="1 0 0 0">
+                                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                            <joint type="hinge" pos="0 0 0" axis="0.0494004 0.0366003 0.998108" ref="0"/>
+                                            <geom type="mesh" mesh="m26" pos="-0.00834284 -0.0816934 0.0169071" quat="0.639645 0.547532 -0.316989 0.436556" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                            <body pos="0.0004 -0.0115 0.02" quat="1 0 0 0">
+                                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                              <joint type="hinge" pos="0 0 0" axis="-0.017161 0.992666 -0.119668" ref="0"/>
+                                              <geom type="mesh" mesh="m27" pos="0.0177869 -0.135568 0.0150711" quat="0.404899 0.428055 -0.51524 0.622377" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                              <body pos="0.018 -0.242 0.025" quat="1 0 0 0">
+                                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+                                                <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+                                                <geom type="mesh" mesh="m28" pos="3.57291e-06 -1.86177e-06 1.78763e-07" quat="0.929917 -0.1373 -0.125074 0.317425" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                <body pos="0.012345 -0.004464 -0.001254" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m29" pos="-2.38384e-05 -9.01842e-06 3.8339e-05" quat="0.945816 -0.257468 -0.190899 0.0519661" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.013388 -0.009886 -0.010593" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m30" pos="0.00177809 -0.00090739 -7.19019e-05" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.010784 -0.007499 -0.001289" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m31" pos="5.93085e-07 -1.12255e-06 -3.39353e-06" quat="0.562796 0.795772 -0.182579 -0.129126" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="0.003992 -0.015054 0.002327" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m32" pos="2.49975e-06 -4.31973e-06 1.34042e-06" quat="0.812271 0.56466 -0.1258 0.0744899" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                  <body pos="0.015293 -0.004569 -0.010308" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m33" pos="-5.67989e-06 1.52778e-06 -7.33894e-07" quat="0.435279 0.302787 -0.279661 0.800401" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.0072 -0.0054 -0.0025" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m34" pos="0.00905626 -0.0144692 -0.00571865" quat="0.280827 0.716945 -0.416587 0.483303" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.0165 -0.0292 -0.0127" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m35" pos="0.00854744 -0.0150814 -0.00562469" quat="0.538599 0.807402 0.0801444 0.227134" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.014 -0.0259 -0.0101" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m36" pos="0.00423398 -0.0090825 -0.00362338" quat="0.547187 0.797438 0.209698 0.143891" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.009143 -0.004062 -0.002464" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m37" pos="1.37388e-06 -1.47706e-06 1.89135e-07" quat="0.953272 0.0818789 0.28974 -0.0248865" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="-0.010969 -0.002495 -0.00075" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m38" pos="-1.14829e-05 -1.37379e-06 1.52075e-06" quat="0.584628 0.707143 -0.39691 -0.0249379" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="0.014685 -0.03762 0.005032" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m39" pos="-0.000104825 0.000126387 -0.000139835" quat="0.341448 0.374925 -0.526508 0.682374" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.003501 -0.028243 0.00362" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m40" pos="0.00427569 -0.0224191 0.00466521" quat="0.561022 0.540713 -0.3533 0.517748" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00751 -0.041273 0.007326" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m41" pos="0.00172775 -0.0136163 0.000385687" quat="0.486749 0.507398 -0.445879 0.553907" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.003333 -0.024888 0.00122" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m42" pos="0.00106852 -0.00849873 0.000299224" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.000477 -0.039239 0.007377" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m43" pos="1.22248e-05 0.000516874 -0.00024081" quat="0.746865 0.658839 0.0650894 -0.0623494" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.00024 -0.02629 0.001778" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m44" pos="0.0010735 -0.0232884 0.00450999" quat="0.52574 0.47286 -0.46466 0.533002" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00165 -0.044211 0.00623" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m45" pos="0.000681608 -0.0148759 0.00158769" quat="0.500457 0.499543 -0.474229 0.524507" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.001365 -0.029047 0.001954" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m46" pos="0.000627351 -0.00855889 -3.2481e-05" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.012046 -0.040519 0.003513" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m47" pos="4.38013e-05 0.000531943 -0.000166768" quat="0.713767 0.673963 -0.159247 0.104644" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.00183 -0.023689 -0.000173" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m48" pos="-0.00212312 -0.021592 0.00133174" quat="0.429522 0.358897 -0.595296 0.576477" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.003528 -0.040255 0.001345" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m49" pos="-0.00161008 -0.0131151 0.00059821" quat="0.706711 0.706711 -0.0236551 -0.0236551" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002317 -0.024789 0.000563" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m50" pos="-0.000650434 -0.00885048 0.00105236" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.021896 -0.034683 -0.004218" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m51" pos="0.000194676 0.000418515 -0.000128649" quat="0.693938 0.71719 -0.0459525 -0.0444628" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.001597 -0.021431 -0.001496" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m52" pos="-0.00330598 -0.0193215 -0.00119391" quat="0.303492 0.235515 -0.690203 0.613225" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.005279 -0.035563 -0.002879" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m53" pos="-0.00161542 -0.0117706 -0.00133807" quat="0.705198 0.705198 -0.0519194 -0.0519194" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002871 -0.020677 -0.002243" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m54" pos="-0.00114806 -0.00783127 -0.00080719" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                </body>
+                                              </body>
+                                            </body>
+                                          </body>
+                                        </body>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                          <body pos="0.044675 -0.01807 -0.025465" quat="1 0 0 0">
+                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                            <body pos="0 0 -0" quat="1 0 0 0">
+                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                              <joint type="hinge" pos="0 0 -0" axis="-0.0153 -0.989299 -0.1451" ref="0"/>
+                              <joint type="hinge" pos="0 0 -0" axis="0.994473 -0 -0.104997" ref="0"/>
+                              <geom type="mesh" mesh="m56" pos="-0.0115404 0.00621639 -0.0517142" quat="0.80938 0.162931 0.0481737 0.562171" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                              <body pos="-0.01433 0.02007 -0.1355" quat="1 0 0 0">
+                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                <joint type="hinge" pos="0 0 -0" axis="0.994473 -0 -0.104997" ref="0"/>
+                                <joint type="hinge" pos="0 0 -0" axis="-0.0153 -0.989299 -0.1451" ref="0"/>
+                                <body pos="0 0 -0" quat="1 0 0 0">
+                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                  <joint type="hinge" pos="0 0 -0" axis="-0.157095 -0.947269 -0.279291" ref="0"/>
+                                  <joint type="hinge" pos="0 0 -0" axis="0.754084 -0.297594 0.585487" ref="0"/>
+                                  <joint type="hinge" pos="0 0 -0" axis="-0.6377 -0.1186 0.7611" ref="0"/>
+                                  <geom type="mesh" mesh="m57" pos="-0.0551769 -0.0374594 0.0480278" quat="0.869603 0.340433 -0.35758 -0.00578757" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                  <body pos="-0.00955 -0.034 -0.009" quat="1 0 0 0">
+                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                    <joint type="hinge" pos="0 0 -0" axis="-0.6377 -0.1186 0.7611" ref="0"/>
+                                    <joint type="hinge" pos="0 0 -0" axis="0.754084 -0.297594 0.585487" ref="0"/>
+                                    <joint type="hinge" pos="0 0 -0" axis="-0.157095 -0.947269 -0.279291" ref="0"/>
+                                    <body pos="0 0 -0" quat="1 0 0 0">
+                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                      <joint type="hinge" pos="0 0 -0" axis="-0.00479995 -0.999089 0.0423995" ref="0"/>
+                                      <body pos="0 0 -0" quat="1 0 0 0">
+                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                        <joint type="hinge" pos="0 0 -0" axis="0.998261 -0.00229991 0.0588977" ref="0"/>
+                                        <joint type="hinge" pos="0 0 -0" axis="-0.00479995 -0.999089 0.0423995" ref="0"/>
+                                        <body pos="0 0 -0" quat="1 0 0 0">
+                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                          <joint type="hinge" pos="0 0 -0" axis="-0.00479995 -0.999089 0.0423995" ref="0"/>
+                                          <geom type="mesh" mesh="m58" pos="0.000738997 -0.13714 0.0037705" quat="0.720688 0.693143 -0.00391527 0.0121095" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                          <body pos="0.0061 -0.2904 0.0123" quat="1 0 0 0">
+                                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                            <joint type="hinge" pos="0 0 -0" axis="-0.0494004 -0.0366003 0.998108" ref="0"/>
+                                            <geom type="mesh" mesh="m59" pos="-0.00834284 -0.0816934 -0.0169071" quat="0.316989 0.436556 -0.639645 0.547532" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                            <body pos="0.0004 -0.0115 -0.02" quat="1 0 0 0">
+                                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                              <joint type="hinge" pos="0 0 -0" axis="0.017161 -0.992666 -0.119668" ref="0"/>
+                                              <geom type="mesh" mesh="m60" pos="0.0177869 -0.135568 -0.0150711" quat="0.51524 0.622377 -0.404899 0.428055" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                              <body pos="0.018 -0.242 -0.025" quat="1 0 0 0">
+                                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                <joint type="hinge" pos="0 0 -0" axis="-0 -0 1" ref="0"/>
+                                                <joint type="hinge" pos="0 0 -0" axis="-1 -0 0" ref="0"/>
+                                                <geom type="mesh" mesh="m61" pos="3.57291e-06 -1.86177e-06 -1.78763e-07" quat="0.929917 0.1373 0.125074 0.317425" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                <body pos="0.012345 -0.004464 0.001254" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m62" pos="-2.38384e-05 -9.01842e-06 -3.8339e-05" quat="0.945816 0.257468 0.190899 0.0519661" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.013388 -0.009886 0.010593" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m63" pos="0.00177809 -0.00090739 7.19019e-05" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.010784 -0.007499 0.001289" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m64" pos="5.93085e-07 -1.12255e-06 3.39353e-06" quat="0.795772 0.562796 -0.129126 -0.182579" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="0.003992 -0.015054 -0.002327" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m65" pos="2.49975e-06 -4.31973e-06 -1.34042e-06" quat="0.56466 0.812271 0.0744899 -0.1258" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                  <body pos="0.015293 -0.004569 0.010308" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m66" pos="-5.67989e-06 1.52778e-06 7.33894e-07" quat="0.279661 0.800401 -0.435279 0.302787" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.0072 -0.0054 0.0025" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m67" pos="0.00905626 -0.0144692 0.00571865" quat="0.416587 0.483303 -0.280827 0.716945" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.0165 -0.0292 0.0127" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m68" pos="0.00854744 -0.0150814 0.00562469" quat="0.807402 0.538599 0.227134 0.0801444" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.014 -0.0259 0.0101" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m69" pos="0.00423398 -0.0090825 0.00362338" quat="0.797438 0.547187 0.143891 0.209698" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.009143 -0.004062 0.002464" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m70" pos="1.37388e-06 -1.47706e-06 -1.89135e-07" quat="0.953272 -0.0818789 -0.28974 -0.0248865" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="-0.010969 -0.002495 0.00075" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m71" pos="-1.14829e-05 -1.37379e-06 -1.52075e-06" quat="0.707143 0.584628 -0.0249379 -0.39691" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="0.014685 -0.03762 -0.005032" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m72" pos="-0.000104825 0.000126387 0.000139835" quat="0.526508 0.682374 -0.341448 0.374925" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.003501 -0.028243 -0.00362" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m73" pos="0.00427569 -0.0224191 -0.00466521" quat="0.3533 0.517748 -0.561022 0.540713" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00751 -0.041273 -0.007326" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m74" pos="0.00172775 -0.0136163 -0.000385687" quat="0.445879 0.553907 -0.486749 0.507398" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.003333 -0.024888 -0.00122" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m75" pos="0.00106852 -0.00849873 -0.000299224" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.000477 -0.039239 -0.007377" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m76" pos="1.22248e-05 0.000516874 0.00024081" quat="0.658839 0.746865 -0.0623494 0.0650894" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.00024 -0.02629 -0.001778" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m77" pos="0.0010735 -0.0232884 -0.00450999" quat="0.46466 0.533002 -0.52574 0.47286" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00165 -0.044211 -0.00623" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m78" pos="0.000681608 -0.0148759 -0.00158769" quat="0.474229 0.524507 -0.500457 0.499543" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.001365 -0.029047 -0.001954" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m79" pos="0.000627351 -0.00855889 3.2481e-05" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.012046 -0.040519 -0.003513" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m80" pos="4.38013e-05 0.000531943 0.000166768" quat="0.673963 0.713767 0.104644 -0.159247" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.00183 -0.023689 0.000173" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m81" pos="-0.00212312 -0.021592 -0.00133174" quat="0.595296 0.576477 -0.429522 0.358897" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.003528 -0.040255 -0.001345" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m82" pos="-0.00161008 -0.0131151 -0.00059821" quat="0.706711 0.706711 -0.0236551 -0.0236551" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002317 -0.024789 -0.000563" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m83" pos="-0.000650434 -0.00885048 -0.00105236" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.021896 -0.034683 0.004218" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m84" pos="0.000194676 0.000418515 0.000128649" quat="0.71719 0.693938 -0.0444628 -0.0459525" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.001597 -0.021431 0.001496" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m85" pos="-0.00330598 -0.0193215 0.00119391" quat="0.690203 0.613225 -0.303492 0.235515" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.005279 -0.035563 0.002879" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m86" pos="-0.00161542 -0.0117706 0.00133807" quat="0.705198 0.705198 -0.0519194 -0.0519194" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002871 -0.020677 0.002243" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m87" pos="-0.00114806 -0.00783127 0.00080719" quat="0.707107 0.707107 0 0" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                </body>
+                                              </body>
+                                            </body>
+                                          </body>
+                                        </body>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body pos="0 0 0" quat="1 0 0 0">
+        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+        <body pos="0 0 0" quat="0.500398 0.5 -0.5 -0.499602">
+          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+          <geom type="mesh" mesh="m88" pos="-0.0650317 -0.0306897 0.0621793" quat="0.246755 0.436228 -0.680233 0.534884" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+          <geom type="mesh" mesh="m89" pos="-0.0650317 -0.0306897 -0.0621793" quat="0.680233 0.534884 -0.246755 0.436228" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+          <body pos="-0.056276 -0.07849 0.07726" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+            <geom type="mesh" mesh="m90" pos="0.000862865 -0.207554 0.011923" quat="0.691172 0.720868 -0.0272657 0.0434402" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+            <body pos="-4.6e-07 -0.404425 -0.00126526" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0.992246 0.123982 -0.00878916" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="-0.124293 0.989762 -0.0701648" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="-3.98373e-10 -0.0707131 -0.997497" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0.992246 0.123982 -0.00878916" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="-0.124293 0.989762 -0.0701648" ref="0"/>
+              <geom type="mesh" mesh="m91" pos="-0.00168161 -0.168417 0.00295836" quat="0.687382 0.705651 0.1249 -0.118165" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+              <geom type="mesh" mesh="m92" pos="-0.0190819 -0.225556 0.02241" quat="0.704589 0.70905 0.0255163 -0.0122645" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+              <body pos="-0.01 -0.4 0" quat="1 0 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                <joint type="hinge" pos="0 0 0" axis="-0.105014 -0.174022 0.979126" ref="0"/>
+                <geom type="mesh" mesh="m93" pos="0.00593729 0.000343512 -0.00168399" quat="0.467498 0.473443 0.545234 0.509919" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                <body pos="-0.04877 -0.04195 0.00792" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                  <joint type="hinge" pos="0 0 0" axis="0.78718 0.604747 -0.120949" ref="0"/>
+                  <geom type="mesh" mesh="m94" pos="0.0834488 0.0161595 -0.00362138" quat="0.488403 0.530894 0.484737 0.494615" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                  <body pos="0.1788 -0.002 0.00108" quat="1 0 0 0">
+                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                    <joint type="hinge" pos="0 0 0" axis="0.580954 0 -0.813936" ref="0"/>
+                    <geom type="mesh" mesh="m95" pos="0.019064 -0.0014153 0.00963989" quat="0.28297 0.681244 0.609455 0.290514" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body pos="-0.00809 -0.40796 0" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0 1 0" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="1 0 0" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+              <geom type="mesh" mesh="m96" pos="0.00247467 0.0279667 0.000739699" quat="0.73244 0.679896 -0.0254 -0.0250591" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+            </body>
+          </body>
+          <body pos="-0.056276 -0.07849 -0.07726" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="-1 0 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 -1 0" ref="0"/>
+            <geom type="mesh" mesh="m97" pos="0.000862865 -0.207554 -0.011923" quat="0.720868 0.691172 0.0434402 -0.0272657" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+            <body pos="-4.6e-07 -0.404425 0.00126526" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0.992246 0.123982 0.00878916" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="-0.124293 0.989762 0.0701648" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="3.98373e-10 0.0707131 -0.997497" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="-0.992246 -0.123982 -0.00878916" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0.124293 -0.989762 -0.0701648" ref="0"/>
+              <geom type="mesh" mesh="m98" pos="-0.00168161 -0.168417 -0.00295836" quat="0.705651 0.687382 -0.118165 0.1249" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+              <geom type="mesh" mesh="m99" pos="-0.0190819 -0.225556 -0.02241" quat="0.70905 0.704589 -0.0122645 0.0255163" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+              <body pos="-0.01 -0.4 0" quat="1 0 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                <joint type="hinge" pos="0 0 0" axis="0.105014 0.174022 0.979126" ref="0"/>
+                <geom type="mesh" mesh="m100" pos="0.00593729 0.000343512 0.00168399" quat="0.473443 0.467498 0.509919 0.545234" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                <body pos="-0.04877 -0.04195 -0.00792" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                  <joint type="hinge" pos="0 0 0" axis="-0.78718 -0.604747 -0.120949" ref="0"/>
+                  <geom type="mesh" mesh="m101" pos="0.0834488 0.0161595 0.00362138" quat="0.530894 0.488403 0.494615 0.484737" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                  <body pos="0.1788 -0.002 -0.00108" quat="1 0 0 0">
+                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                    <joint type="hinge" pos="0 0 0" axis="-0.580954 0 -0.813936" ref="0"/>
+                    <geom type="mesh" mesh="m102" pos="0.019064 -0.0014153 -0.00963989" quat="0.681244 0.28297 0.290514 0.609455" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body pos="-0.00809 -0.40796 0" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0 1 0" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="1 0 0" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+              <geom type="mesh" mesh="m103" pos="0.00247467 0.0279667 -0.000739699" quat="0.679896 0.73244 -0.0250591 -0.0254" rgba="1 0.55 0.25 1" contype="0" conaffinity="0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body pos="0.025 -1.1 1" quat="0 0 0 1">
+      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+      <joint type="free" pos="0 0 0"/>
+      <body pos="0 0 0" quat="0.5 0.5 -0.5 -0.5">
+        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+        <geom type="mesh" mesh="m104" pos="-0.113198 0.0184269 9.23065e-06" quat="0.694832 0.695197 -0.127634 -0.132738" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+        <body pos="-0.098 0.071 0" quat="1 0 0 0">
+          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+          <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+          <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+          <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+          <geom type="mesh" mesh="m105" pos="-0.00980104 0.0107111 -2.24799e-19" quat="0.524756 0.524756 0.473953 0.473953" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+          <body pos="0.098 0.0711 0" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="slide" pos="0 0 0" axis="1 0 0" ref="0"/>
+            <joint type="slide" pos="0 0 0" axis="0 1 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+          </body>
+          <body pos="0.009 0.0321 0" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+            <geom type="mesh" mesh="m106" pos="-0.0136846 0.0165325 -2.09455e-19" quat="0.501416 0.501416 0.49858 0.49858" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+            <body pos="0.0006 0.0332 0" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+              <geom type="mesh" mesh="m107" pos="-0.0125117 0.0187478 -2.67361e-11" quat="0.465373 0.465373 0.53238 0.53238" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+              <body pos="-0.0067 0.0351 0" quat="1 0 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+                <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+                <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+                <geom type="mesh" mesh="m108" pos="-0.0118232 0.0149247 -4.48041e-19" quat="0.395403 0.395403 0.586222 0.586222" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                <body pos="-0.0114 0.0288 0" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                  <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+                  <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+                  <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+                  <geom type="mesh" mesh="m109" pos="-0.0125587 0.0159499 -2.13503e-19" quat="0.389627 0.389627 0.590077 0.590077" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                  <body pos="0.0025 -0.089 0" quat="1 0 0 0">
+                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                    <geom type="mesh" mesh="m110" pos="-0.0316303 0.128096 6.47315e-08" quat="0.346144 0.346144 0.616591 0.616591" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m111" pos="-0.0462385 0.156985 6.47431e-08" quat="0.401422 0.401422 0.582117 0.582117" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m112" pos="-0.0526331 0.183226 6.17789e-08" quat="0.419369 0.419369 0.569324 0.569324" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m113" pos="-0.0563645 0.209309 6.36268e-08" quat="0.467423 0.467423 0.530581 0.530581" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m114" pos="-0.0564934 0.233924 6.42244e-08" quat="0.462121 0.462121 0.535204 0.535204" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m115" pos="-0.0567728 0.259491 5.77253e-08" quat="0.441507 0.441507 0.552333 0.552333" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m116" pos="-0.0559048 0.279837 4.84058e-08" quat="0.444087 0.444087 0.550261 0.550261" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m117" pos="-0.0514884 0.3019 4.8637e-08" quat="0.457905 0.457905 0.538816 0.538816" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m118" pos="-0.0502432 0.324478 0.00130402" quat="0.461415 0.461415 0.535813 0.535813" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m119" pos="-0.0459608 0.347792 0.000557157" quat="0.47481 0.475046 0.524434 0.523312" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m120" pos="-0.0405909 0.368172 0.000524609" quat="0.489189 0.489772 0.510606 0.509999" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m121" pos="-0.0356729 0.386513 7.68626e-05" quat="0.523275 0.52673 0.475665 0.47168" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <geom type="mesh" mesh="m122" pos="0.0141389 0.240883 0.000692138" quat="0.981096 -0.00128459 0.00483333 0.193457" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                    <body pos="-0.005 -0.01 0" quat="1 0 0 0">
+                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                      <body pos="0 0 0" quat="1 0 0 0">
+                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                        <geom type="mesh" mesh="m123" pos="-0.0170413 0.458011 0.000143403" quat="0.521029 0.447279 -0.546907 0.478918" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                        <body pos="0 0.5 0" quat="1 0 0 0">
+                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                          <geom type="mesh" mesh="m124" pos="0.0428457 -0.00300664 0.000458964" quat="0.930151 0.0010338 0.000408092 0.367176" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                          <geom type="mesh" mesh="m125" pos="0.00372986 0.0750453 -2.15629e-05" quat="0.128672 0.694522 -0.134999 0.69488" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                        </body>
+                      </body>
+                    </body>
+                    <body pos="0.02 0.37 0" quat="0.5 -0.5 0.5 0.5">
+                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                      <body pos="0 0 0" quat="0.5 0.5 -0.5 -0.5">
+                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                        <body pos="-0.03634 0.025 0" quat="1 0 0 0">
+                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                          <body pos="0.044675 -0.01807 0.025465" quat="1 0 0 0">
+                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                            <body pos="0 0 0" quat="1 0 0 0">
+                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                              <joint type="hinge" pos="0 0 0" axis="0.0153 0.989299 -0.1451" ref="0"/>
+                              <joint type="hinge" pos="0 0 0" axis="-0.994473 0 -0.104997" ref="0"/>
+                              <geom type="mesh" mesh="m127" pos="-0.0115404 0.00621639 0.0517142" quat="0.80938 -0.162931 -0.0481737 0.562171" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                              <body pos="-0.01433 0.02007 0.1355" quat="1 0 0 0">
+                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                <joint type="hinge" pos="0 0 0" axis="-0.994473 0 -0.104997" ref="0"/>
+                                <joint type="hinge" pos="0 0 0" axis="0.0153 0.989299 -0.1451" ref="0"/>
+                                <body pos="0 0 0" quat="1 0 0 0">
+                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                  <joint type="hinge" pos="0 0 0" axis="0.157095 0.947269 -0.279291" ref="0"/>
+                                  <joint type="hinge" pos="0 0 0" axis="-0.754084 0.297594 0.585487" ref="0"/>
+                                  <joint type="hinge" pos="0 0 0" axis="0.6377 0.1186 0.7611" ref="0"/>
+                                  <geom type="mesh" mesh="m128" pos="-0.0551769 -0.0374594 -0.0480278" quat="0.340433 0.869603 -0.00578757 -0.35758" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                  <body pos="-0.00955 -0.034 0.009" quat="1 0 0 0">
+                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                    <joint type="hinge" pos="0 0 0" axis="0.6377 0.1186 0.7611" ref="0"/>
+                                    <joint type="hinge" pos="0 0 0" axis="-0.754084 0.297594 0.585487" ref="0"/>
+                                    <joint type="hinge" pos="0 0 0" axis="0.157095 0.947269 -0.279291" ref="0"/>
+                                    <body pos="0 0 0" quat="1 0 0 0">
+                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                      <joint type="hinge" pos="0 0 0" axis="0.00479995 0.999089 0.0423995" ref="0"/>
+                                      <body pos="0 0 0" quat="1 0 0 0">
+                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                        <joint type="hinge" pos="0 0 0" axis="-0.998261 0.00229991 0.0588977" ref="0"/>
+                                        <joint type="hinge" pos="0 0 0" axis="0.00479995 0.999089 0.0423995" ref="0"/>
+                                        <body pos="0 0 0" quat="1 0 0 0">
+                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                          <joint type="hinge" pos="0 0 0" axis="0.00479995 0.999089 0.0423995" ref="0"/>
+                                          <geom type="mesh" mesh="m129" pos="0.000738997 -0.13714 -0.0037705" quat="0.693143 0.720688 0.0121095 -0.00391527" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                          <body pos="0.0061 -0.2904 -0.0123" quat="1 0 0 0">
+                                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                            <joint type="hinge" pos="0 0 0" axis="0.0494004 0.0366003 0.998108" ref="0"/>
+                                            <geom type="mesh" mesh="m130" pos="-0.00834284 -0.0816934 0.0169071" quat="0.639645 0.547532 -0.316989 0.436556" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                            <body pos="0.0004 -0.0115 0.02" quat="1 0 0 0">
+                                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                              <joint type="hinge" pos="0 0 0" axis="-0.017161 0.992666 -0.119668" ref="0"/>
+                                              <geom type="mesh" mesh="m131" pos="0.0177869 -0.135568 0.0150711" quat="0.404899 0.428055 -0.51524 0.622377" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                              <body pos="0.018 -0.242 0.025" quat="1 0 0 0">
+                                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+                                                <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+                                                <geom type="mesh" mesh="m132" pos="3.57291e-06 -1.86177e-06 1.78763e-07" quat="0.929917 -0.1373 -0.125074 0.317425" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                <body pos="0.012345 -0.004464 -0.001254" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m133" pos="-2.38384e-05 -9.01842e-06 3.8339e-05" quat="0.945816 -0.257468 -0.190899 0.0519661" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.013388 -0.009886 -0.010593" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m134" pos="0.00177809 -0.00090739 -7.19019e-05" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.010784 -0.007499 -0.001289" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m135" pos="5.93085e-07 -1.12255e-06 -3.39353e-06" quat="0.562796 0.795772 -0.182579 -0.129126" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="0.003992 -0.015054 0.002327" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m136" pos="2.49975e-06 -4.31973e-06 1.34042e-06" quat="0.812271 0.56466 -0.1258 0.0744899" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                  <body pos="0.015293 -0.004569 -0.010308" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m137" pos="-5.67989e-06 1.52778e-06 -7.33894e-07" quat="0.435279 0.302787 -0.279661 0.800401" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.0072 -0.0054 -0.0025" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m138" pos="0.00905626 -0.0144692 -0.00571865" quat="0.280827 0.716945 -0.416587 0.483303" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.0165 -0.0292 -0.0127" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m139" pos="0.00854744 -0.0150814 -0.00562469" quat="0.538599 0.807402 0.0801444 0.227134" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.014 -0.0259 -0.0101" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m140" pos="0.00423398 -0.0090825 -0.00362338" quat="0.547187 0.797438 0.209698 0.143891" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.009143 -0.004062 -0.002464" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m141" pos="1.37388e-06 -1.47706e-06 1.89135e-07" quat="0.953272 0.0818789 0.28974 -0.0248865" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="-0.010969 -0.002495 -0.00075" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m142" pos="-1.14829e-05 -1.37379e-06 1.52075e-06" quat="0.584628 0.707143 -0.39691 -0.0249379" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="0.014685 -0.03762 0.005032" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m143" pos="-0.000104825 0.000126387 -0.000139835" quat="0.341448 0.374925 -0.526508 0.682374" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.003501 -0.028243 0.00362" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m144" pos="0.00427569 -0.0224191 0.00466521" quat="0.561022 0.540713 -0.3533 0.517748" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00751 -0.041273 0.007326" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m145" pos="0.00172775 -0.0136163 0.000385687" quat="0.486749 0.507398 -0.445879 0.553907" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.003333 -0.024888 0.00122" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m146" pos="0.00106852 -0.00849873 0.000299224" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.000477 -0.039239 0.007377" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m147" pos="1.22248e-05 0.000516874 -0.00024081" quat="0.746865 0.658839 0.0650894 -0.0623494" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.00024 -0.02629 0.001778" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m148" pos="0.0010735 -0.0232884 0.00450999" quat="0.52574 0.47286 -0.46466 0.533002" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00165 -0.044211 0.00623" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m149" pos="0.000681608 -0.0148759 0.00158769" quat="0.500457 0.499543 -0.474229 0.524507" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.001365 -0.029047 0.001954" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m150" pos="0.000627351 -0.00855889 -3.2481e-05" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.012046 -0.040519 0.003513" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m151" pos="4.38013e-05 0.000531943 -0.000166768" quat="0.713767 0.673963 -0.159247 0.104644" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.00183 -0.023689 -0.000173" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m152" pos="-0.00212312 -0.021592 0.00133174" quat="0.429522 0.358897 -0.595296 0.576477" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.003528 -0.040255 0.001345" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m153" pos="-0.00161008 -0.0131151 0.00059821" quat="0.706711 0.706711 -0.0236551 -0.0236551" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002317 -0.024789 0.000563" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m154" pos="-0.000650434 -0.00885048 0.00105236" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.021896 -0.034683 -0.004218" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m155" pos="0.000194676 0.000418515 -0.000128649" quat="0.693938 0.71719 -0.0459525 -0.0444628" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.001597 -0.021431 -0.001496" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m156" pos="-0.00330598 -0.0193215 -0.00119391" quat="0.303492 0.235515 -0.690203 0.613225" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.005279 -0.035563 -0.002879" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m157" pos="-0.00161542 -0.0117706 -0.00133807" quat="0.705198 0.705198 -0.0519194 -0.0519194" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002871 -0.020677 -0.002243" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m158" pos="-0.00114806 -0.00783127 -0.00080719" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                </body>
+                                              </body>
+                                            </body>
+                                          </body>
+                                        </body>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                          <body pos="0.044675 -0.01807 -0.025465" quat="1 0 0 0">
+                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                            <body pos="0 0 -0" quat="1 0 0 0">
+                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                              <joint type="hinge" pos="0 0 -0" axis="-0.0153 -0.989299 -0.1451" ref="0"/>
+                              <joint type="hinge" pos="0 0 -0" axis="0.994473 -0 -0.104997" ref="0"/>
+                              <geom type="mesh" mesh="m160" pos="-0.0115404 0.00621639 -0.0517142" quat="0.80938 0.162931 0.0481737 0.562171" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                              <body pos="-0.01433 0.02007 -0.1355" quat="1 0 0 0">
+                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                <joint type="hinge" pos="0 0 -0" axis="0.994473 -0 -0.104997" ref="0"/>
+                                <joint type="hinge" pos="0 0 -0" axis="-0.0153 -0.989299 -0.1451" ref="0"/>
+                                <body pos="0 0 -0" quat="1 0 0 0">
+                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                  <joint type="hinge" pos="0 0 -0" axis="-0.157095 -0.947269 -0.279291" ref="0"/>
+                                  <joint type="hinge" pos="0 0 -0" axis="0.754084 -0.297594 0.585487" ref="0"/>
+                                  <joint type="hinge" pos="0 0 -0" axis="-0.6377 -0.1186 0.7611" ref="0"/>
+                                  <geom type="mesh" mesh="m161" pos="-0.0551769 -0.0374594 0.0480278" quat="0.869603 0.340433 -0.35758 -0.00578757" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                  <body pos="-0.00955 -0.034 -0.009" quat="1 0 0 0">
+                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                    <joint type="hinge" pos="0 0 -0" axis="-0.6377 -0.1186 0.7611" ref="0"/>
+                                    <joint type="hinge" pos="0 0 -0" axis="0.754084 -0.297594 0.585487" ref="0"/>
+                                    <joint type="hinge" pos="0 0 -0" axis="-0.157095 -0.947269 -0.279291" ref="0"/>
+                                    <body pos="0 0 -0" quat="1 0 0 0">
+                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                      <joint type="hinge" pos="0 0 -0" axis="-0.00479995 -0.999089 0.0423995" ref="0"/>
+                                      <body pos="0 0 -0" quat="1 0 0 0">
+                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                        <joint type="hinge" pos="0 0 -0" axis="0.998261 -0.00229991 0.0588977" ref="0"/>
+                                        <joint type="hinge" pos="0 0 -0" axis="-0.00479995 -0.999089 0.0423995" ref="0"/>
+                                        <body pos="0 0 -0" quat="1 0 0 0">
+                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                          <joint type="hinge" pos="0 0 -0" axis="-0.00479995 -0.999089 0.0423995" ref="0"/>
+                                          <geom type="mesh" mesh="m162" pos="0.000738997 -0.13714 0.0037705" quat="0.720688 0.693143 -0.00391527 0.0121095" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                          <body pos="0.0061 -0.2904 0.0123" quat="1 0 0 0">
+                                            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                            <joint type="hinge" pos="0 0 -0" axis="-0.0494004 -0.0366003 0.998108" ref="0"/>
+                                            <geom type="mesh" mesh="m163" pos="-0.00834284 -0.0816934 -0.0169071" quat="0.316989 0.436556 -0.639645 0.547532" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                            <body pos="0.0004 -0.0115 -0.02" quat="1 0 0 0">
+                                              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                              <joint type="hinge" pos="0 0 -0" axis="0.017161 -0.992666 -0.119668" ref="0"/>
+                                              <geom type="mesh" mesh="m164" pos="0.0177869 -0.135568 -0.0150711" quat="0.51524 0.622377 -0.404899 0.428055" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                              <body pos="0.018 -0.242 -0.025" quat="1 0 0 0">
+                                                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                <joint type="hinge" pos="0 0 -0" axis="-0 -0 1" ref="0"/>
+                                                <joint type="hinge" pos="0 0 -0" axis="-1 -0 0" ref="0"/>
+                                                <geom type="mesh" mesh="m165" pos="3.57291e-06 -1.86177e-06 -1.78763e-07" quat="0.929917 0.1373 0.125074 0.317425" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                <body pos="0.012345 -0.004464 0.001254" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m166" pos="-2.38384e-05 -9.01842e-06 -3.8339e-05" quat="0.945816 0.257468 0.190899 0.0519661" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.013388 -0.009886 0.010593" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m167" pos="0.00177809 -0.00090739 7.19019e-05" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="-0.010784 -0.007499 0.001289" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m168" pos="5.93085e-07 -1.12255e-06 3.39353e-06" quat="0.795772 0.562796 -0.129126 -0.182579" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                </body>
+                                                <body pos="0.003992 -0.015054 -0.002327" quat="1 0 0 0">
+                                                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                  <geom type="mesh" mesh="m169" pos="2.49975e-06 -4.31973e-06 -1.34042e-06" quat="0.56466 0.812271 0.0744899 -0.1258" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                  <body pos="0.015293 -0.004569 0.010308" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m170" pos="-5.67989e-06 1.52778e-06 7.33894e-07" quat="0.279661 0.800401 -0.435279 0.302787" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.0072 -0.0054 0.0025" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m171" pos="0.00905626 -0.0144692 0.00571865" quat="0.416587 0.483303 -0.280827 0.716945" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.0165 -0.0292 0.0127" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m172" pos="0.00854744 -0.0150814 0.00562469" quat="0.807402 0.538599 0.227134 0.0801444" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.014 -0.0259 0.0101" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m173" pos="0.00423398 -0.0090825 0.00362338" quat="0.797438 0.547187 0.143891 0.209698" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.009143 -0.004062 0.002464" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m174" pos="1.37388e-06 -1.47706e-06 -1.89135e-07" quat="0.953272 -0.0818789 -0.28974 -0.0248865" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="-0.010969 -0.002495 0.00075" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m175" pos="-1.14829e-05 -1.37379e-06 -1.52075e-06" quat="0.707143 0.584628 -0.0249379 -0.39691" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                  </body>
+                                                  <body pos="0.014685 -0.03762 -0.005032" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m176" pos="-0.000104825 0.000126387 0.000139835" quat="0.526508 0.682374 -0.341448 0.374925" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.003501 -0.028243 -0.00362" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m177" pos="0.00427569 -0.0224191 -0.00466521" quat="0.3533 0.517748 -0.561022 0.540713" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00751 -0.041273 -0.007326" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m178" pos="0.00172775 -0.0136163 -0.000385687" quat="0.445879 0.553907 -0.486749 0.507398" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.003333 -0.024888 -0.00122" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m179" pos="0.00106852 -0.00849873 -0.000299224" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="0.000477 -0.039239 -0.007377" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m180" pos="1.22248e-05 0.000516874 0.00024081" quat="0.658839 0.746865 -0.0623494 0.0650894" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="0.00024 -0.02629 -0.001778" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m181" pos="0.0010735 -0.0232884 -0.00450999" quat="0.46466 0.533002 -0.52574 0.47286" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="0.00165 -0.044211 -0.00623" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m182" pos="0.000681608 -0.0148759 -0.00158769" quat="0.474229 0.524507 -0.500457 0.499543" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="0.001365 -0.029047 -0.001954" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m183" pos="0.000627351 -0.00855889 3.2481e-05" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.012046 -0.040519 -0.003513" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m184" pos="4.38013e-05 0.000531943 0.000166768" quat="0.673963 0.713767 0.104644 -0.159247" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.00183 -0.023689 0.000173" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m185" pos="-0.00212312 -0.021592 -0.00133174" quat="0.595296 0.576477 -0.429522 0.358897" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.003528 -0.040255 -0.001345" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m186" pos="-0.00161008 -0.0131151 -0.00059821" quat="0.706711 0.706711 -0.0236551 -0.0236551" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002317 -0.024789 -0.000563" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m187" pos="-0.000650434 -0.00885048 -0.00105236" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                  <body pos="-0.021896 -0.034683 0.004218" quat="1 0 0 0">
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                    <geom type="mesh" mesh="m188" pos="0.000194676 0.000418515 0.000128649" quat="0.71719 0.693938 -0.0444628 -0.0459525" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                    <body pos="-0.001597 -0.021431 0.001496" quat="1 0 0 0">
+                                                      <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                      <geom type="mesh" mesh="m189" pos="-0.00330598 -0.0193215 0.00119391" quat="0.690203 0.613225 -0.303492 0.235515" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                      <body pos="-0.005279 -0.035563 0.002879" quat="1 0 0 0">
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                        <geom type="mesh" mesh="m190" pos="-0.00161542 -0.0117706 0.00133807" quat="0.705198 0.705198 -0.0519194 -0.0519194" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        <body pos="-0.002871 -0.020677 0.002243" quat="1 0 0 0">
+                                                          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                                                          <geom type="mesh" mesh="m191" pos="-0.00114806 -0.00783127 0.00080719" quat="0.707107 0.707107 0 0" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                </body>
+                                              </body>
+                                            </body>
+                                          </body>
+                                        </body>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body pos="0 0 0" quat="1 0 0 0">
+        <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+        <body pos="0 0 0" quat="0.500398 0.5 -0.5 -0.499602">
+          <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+          <geom type="mesh" mesh="m192" pos="-0.0650317 -0.0306897 0.0621793" quat="0.246755 0.436228 -0.680233 0.534884" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+          <geom type="mesh" mesh="m193" pos="-0.0650317 -0.0306897 -0.0621793" quat="0.680233 0.534884 -0.246755 0.436228" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+          <body pos="-0.056276 -0.07849 0.07726" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="1 0 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 1 0" ref="0"/>
+            <geom type="mesh" mesh="m194" pos="0.000862865 -0.207554 0.011923" quat="0.691172 0.720868 -0.0272657 0.0434402" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+            <body pos="-4.6e-07 -0.404425 -0.00126526" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0.992246 0.123982 -0.00878916" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="-0.124293 0.989762 -0.0701648" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="-3.98373e-10 -0.0707131 -0.997497" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0.992246 0.123982 -0.00878916" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="-0.124293 0.989762 -0.0701648" ref="0"/>
+              <geom type="mesh" mesh="m195" pos="-0.00168161 -0.168417 0.00295836" quat="0.687382 0.705651 0.1249 -0.118165" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+              <geom type="mesh" mesh="m196" pos="-0.0190819 -0.225556 0.02241" quat="0.704589 0.70905 0.0255163 -0.0122645" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+              <body pos="-0.01 -0.4 0" quat="1 0 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                <joint type="hinge" pos="0 0 0" axis="-0.105014 -0.174022 0.979126" ref="0"/>
+                <geom type="mesh" mesh="m197" pos="0.00593729 0.000343512 -0.00168399" quat="0.467498 0.473443 0.545234 0.509919" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                <body pos="-0.04877 -0.04195 0.00792" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                  <joint type="hinge" pos="0 0 0" axis="0.78718 0.604747 -0.120949" ref="0"/>
+                  <geom type="mesh" mesh="m198" pos="0.0834488 0.0161595 -0.00362138" quat="0.488403 0.530894 0.484737 0.494615" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                  <body pos="0.1788 -0.002 0.00108" quat="1 0 0 0">
+                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                    <joint type="hinge" pos="0 0 0" axis="0.580954 0 -0.813936" ref="0"/>
+                    <geom type="mesh" mesh="m199" pos="0.019064 -0.0014153 0.00963989" quat="0.28297 0.681244 0.609455 0.290514" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body pos="-0.00809 -0.40796 0" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0 1 0" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="1 0 0" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+              <geom type="mesh" mesh="m200" pos="0.00247467 0.0279667 0.000739699" quat="0.73244 0.679896 -0.0254 -0.0250591" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+            </body>
+          </body>
+          <body pos="-0.056276 -0.07849 -0.07726" quat="1 0 0 0">
+            <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+            <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="-1 0 0" ref="0"/>
+            <joint type="hinge" pos="0 0 0" axis="0 -1 0" ref="0"/>
+            <geom type="mesh" mesh="m201" pos="0.000862865 -0.207554 -0.011923" quat="0.720868 0.691172 0.0434402 -0.0272657" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+            <body pos="-4.6e-07 -0.404425 0.00126526" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0.992246 0.123982 0.00878916" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="-0.124293 0.989762 0.0701648" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="3.98373e-10 0.0707131 -0.997497" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="-0.992246 -0.123982 -0.00878916" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0.124293 -0.989762 -0.0701648" ref="0"/>
+              <geom type="mesh" mesh="m202" pos="-0.00168161 -0.168417 -0.00295836" quat="0.705651 0.687382 -0.118165 0.1249" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+              <geom type="mesh" mesh="m203" pos="-0.0190819 -0.225556 -0.02241" quat="0.70905 0.704589 -0.0122645 0.0255163" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+              <body pos="-0.01 -0.4 0" quat="1 0 0 0">
+                <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                <joint type="hinge" pos="0 0 0" axis="0.105014 0.174022 0.979126" ref="0"/>
+                <geom type="mesh" mesh="m204" pos="0.00593729 0.000343512 0.00168399" quat="0.473443 0.467498 0.509919 0.545234" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                <body pos="-0.04877 -0.04195 -0.00792" quat="1 0 0 0">
+                  <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                  <joint type="hinge" pos="0 0 0" axis="-0.78718 -0.604747 -0.120949" ref="0"/>
+                  <geom type="mesh" mesh="m205" pos="0.0834488 0.0161595 0.00362138" quat="0.530894 0.488403 0.494615 0.484737" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                  <body pos="0.1788 -0.002 -0.00108" quat="1 0 0 0">
+                    <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+                    <joint type="hinge" pos="0 0 0" axis="-0.580954 0 -0.813936" ref="0"/>
+                    <geom type="mesh" mesh="m206" pos="0.019064 -0.0014153 -0.00963989" quat="0.681244 0.28297 0.290514 0.609455" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+            <body pos="-0.00809 -0.40796 0" quat="1 0 0 0">
+              <inertial pos="0 0 0" mass="1" diaginertia="1 1 1"/>
+              <joint type="slide" pos="0 0 0" axis="0 1 0" ref="0"/>
+              <joint type="slide" pos="0 0 0" axis="1 0 0" ref="0"/>
+              <joint type="hinge" pos="0 0 0" axis="0 0 1" ref="0"/>
+              <geom type="mesh" mesh="m207" pos="0.00247467 0.0279667 -0.000739699" quat="0.679896 0.73244 -0.0250591 -0.0254" rgba="0.3 0.55 1 1" contype="0" conaffinity="0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

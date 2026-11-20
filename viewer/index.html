@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ChaseTag bout viewer</title>
+<style>
+  :root { --bg:#14181f; --fg:#e8ecf2; --mut:#8b95a5; --acc:#ff8c40; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f3f5f8; --fg:#1b2330; --mut:#5d6878; } }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--fg); font:14px system-ui,sans-serif; }
+  #app { display:flex; flex-direction:column; height:100%; }
+  #view { flex:1; min-height:0; position:relative; }
+  #view canvas { display:block; width:100%; height:100%; }
+  #msg { position:absolute; inset:0; display:grid; place-items:center; color:var(--mut); }
+  #bar { display:flex; gap:12px; align-items:center; padding:10px 16px; flex-wrap:wrap; }
+  #bar input[type=range] { flex:1; min-width:140px; accent-color:var(--acc); }
+  button,select { background:transparent; color:var(--fg); border:1px solid var(--mut); border-radius:6px; padding:6px 12px; font:inherit; }
+  #info { color:var(--mut); padding:0 16px 10px; }
+  .a0 { color:#ff8c40; } .a1 { color:#4d8cff; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="view"><div id="msg">Loading viewer…</div></div>
+  <div id="bar">
+    <button id="play">Pause</button>
+    <select id="clip"></select>
+    <input id="seek" type="range" min="0" max="0" value="0">
+    <span id="time"></span>
+  </div>
+  <div id="info"></div>
+</div>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import loadMujoco from "https://cdn.jsdelivr.net/npm/@mujoco/mujoco@3.17.0/mujoco.js";
+
+const params = new URLSearchParams(location.search);
+const SCENE = params.get("scene") || "scene/";
+const BOUT = params.get("bout") || "bout.bin.gz";
+const $ = (id) => document.getElementById(id);
+
+async function fetchBytes(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${url}: ${r.status}`);
+  return new Uint8Array(await r.arrayBuffer());
+}
+
+async function loadBout(url) {
+  const raw = await fetchBytes(url);
+  const gz = raw[0] === 0x1f && raw[1] === 0x8b;
+  const buf = gz
+    ? await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer()
+    : raw.buffer;
+  const n = new DataView(buf).getUint32(0, true);
+  const head = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 4, n)));
+  let off = 4 + n;
+  for (const c of head.clips) {
+    c.data = new Float32Array(buf.slice(off, off + c.frames * head.nq * 4));
+    off += c.data.byteLength;
+  }
+  return head;
+}
+
+async function main() {
+  const [mujoco, bout, xmlBytes] = await Promise.all([loadMujoco(), loadBout(BOUT), fetchBytes(SCENE + "scene.xml")]);
+  const xml = new TextDecoder().decode(xmlBytes);
+  const files = [...xml.matchAll(/file="([^"]+)"/g)].map((m) => m[1]);
+  mujoco.FS.mkdir("/w");
+  mujoco.FS.writeFile("/w/scene.xml", xmlBytes);
+  const stls = await Promise.all(files.map((f) => fetchBytes(SCENE + f)));
+  files.forEach((f, i) => mujoco.FS.writeFile("/w/" + f, stls[i]));
+  const model = mujoco.MjModel.from_xml_path("/w/scene.xml");
+  const data = new mujoco.MjData(model);
+
+  const view = $("view");
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  view.appendChild(renderer.domElement);
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(getComputedStyle(document.body).backgroundColor);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x445066, 1.1));
+  const sun = new THREE.DirectionalLight(0xffffff, 1.6);
+  sun.position.set(3, -4, 8);
+  scene.add(sun);
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.05, 100);
+  camera.up.set(0, 0, 1);
+  camera.position.set(4, -4, 2.2);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.set(0, 0, 0.9);
+
+  const ground = new THREE.Mesh(
+    new THREE.PlaneGeometry(16, 16),
+    new THREE.MeshStandardMaterial({ color: 0x6b7482, roughness: 1 })
+  );
+  scene.add(ground);
+  const grid = new THREE.GridHelper(16, 16, 0x99a3b3, 0x808a99);
+  grid.rotation.x = Math.PI / 2;
+  grid.position.z = 0.002;
+  scene.add(grid);
+
+  const geoms = [];
+  for (let k = 0; k < model.nmesh; k++) {
+    const v0 = model.mesh_vertadr[k], f0 = model.mesh_faceadr[k];
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute("position", new THREE.BufferAttribute(model.mesh_vert.slice(3 * v0, 3 * (v0 + model.mesh_vertnum[k])), 3));
+    geo.setIndex(new THREE.BufferAttribute(Uint32Array.from(model.mesh_face.subarray(3 * f0, 3 * (f0 + model.mesh_facenum[k]))), 1));
+    geo.computeVertexNormals();
+    geoms.push(geo);
+  }
+  const meshes = [];
+  for (let g = 0; g < model.ngeom; g++) {
+    if (model.geom_type[g] !== 7) continue;
+    const c = model.geom_rgba.subarray(4 * g, 4 * g + 4);
+    const mesh = new THREE.Mesh(geoms[model.geom_dataid[g]], new THREE.MeshStandardMaterial({ color: new THREE.Color(c[0], c[1], c[2]), roughness: 0.7 }));
+    mesh.matrixAutoUpdate = false;
+    scene.add(mesh);
+    meshes.push([g, mesh]);
+  }
+
+  const m4 = new THREE.Matrix4();
+  function pose(clip, i) {
+    data.qpos.set(clip.data.subarray(i * bout.nq, (i + 1) * bout.nq));
+    mujoco.mj_kinematics(model, data);
+    const xp = data.geom_xpos, xm = data.geom_xmat;
+    for (const [g, mesh] of meshes) {
+      const r = xm.subarray(9 * g, 9 * g + 9), p = xp.subarray(3 * g, 3 * g + 3);
+      m4.set(r[0], r[1], r[2], p[0], r[3], r[4], r[5], p[1], r[6], r[7], r[8], p[2], 0, 0, 0, 1);
+      mesh.matrix.copy(m4);
+    }
+    const q = data.qpos, mid = [(q[0] + q[89]) / 2, (q[1] + q[90]) / 2];
+    controls.target.x += (mid[0] - controls.target.x) * 0.1;
+    controls.target.y += (mid[1] - controls.target.y) * 0.1;
+  }
+
+  const clipSel = $("clip"), seek = $("seek"), play = $("play");
+  bout.clips.forEach((c, i) => {
+    const o = new Option(`Bout ${i + 1}: player ${c.agent_0_role.toLowerCase()}s`, i);
+    clipSel.add(o);
+  });
+  let cur = 0, frame = 0, playing = true, last = performance.now(), acc = 0;
+  function select(i) {
+    cur = i; frame = 0;
+    seek.max = bout.clips[i].frames - 1;
+    const c = bout.clips[i];
+    const chaser = c.agent_0_role === "CHASE" ? "a0" : "a1";
+    const runner = chaser === "a0" ? "a1" : "a0";
+    $("info").innerHTML = `<span class="${chaser}">chaser</span> vs <span class="${runner}">runner</span> · ` +
+      `player = <span class="a0">orange</span> · ${c.tagged ? "tagged" : "no tag"} after ${c.elapsed_s} s · score ${c.score}`;
+  }
+  clipSel.onchange = () => select(+clipSel.value);
+  seek.oninput = () => { frame = +seek.value; playing = false; play.textContent = "Play"; };
+  play.onclick = () => { playing = !playing; play.textContent = playing ? "Pause" : "Play"; if (playing && frame >= bout.clips[cur].frames - 1) frame = 0; };
+  select(0);
+
+  function resize() {
+    const w = view.clientWidth, h = view.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h; camera.updateProjectionMatrix();
+  }
+  addEventListener("resize", resize); resize();
+  $("msg").remove();
+
+  function tick(now) {
+    const clip = bout.clips[cur];
+    if (playing) {
+      acc += (now - last) / 1000 * bout.fps;
+      const adv = Math.floor(acc); acc -= adv;
+      frame = Math.min(frame + adv, clip.frames - 1);
+      if (frame >= clip.frames - 1) { playing = false; play.textContent = "Replay"; }
+    }
+    last = now;
+    seek.value = frame;
+    $("time").textContent = `${(frame / bout.fps).toFixed(1)} / ${((clip.frames - 1) / bout.fps).toFixed(1)} s`;
+    pose(clip, frame);
+    controls.update();
+    renderer.render(scene, camera);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+main().catch((e) => { $("msg").textContent = "Viewer error: " + e.message; console.error(e); });
+</script>
+</body>
+</html>
